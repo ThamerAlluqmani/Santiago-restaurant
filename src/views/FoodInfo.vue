@@ -1,0 +1,300 @@
+<template>
+<div>
+  <Model v-if="modelActive" :model-message="this.modelMessage" v-on:close-model="closeModel()"/>
+
+  <div class="container mt-5">
+    <h1 class="text-center mt-5">قائمة الطعام</h1>
+    <p class="text-center mt-2 router">قائمة الطعام > الفطور > الفطور الصحي > بان تشيلي مع بطاطس</p>
+
+    <div class="m-5">
+      <img class="img-fluid  w-75" src="5/Mask.png" alt="">
+    </div>
+
+
+    <div class="row">
+      <div id="right" class="col">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <div class="row  mt-5">
+              <h5 class="col text-end">بان تشيلي مع بطاطس
+                <div class="line"></div>
+              </h5>
+              <h5 class="col secondary text-start">20 ريال سعودي</h5>
+            </div>
+
+            <div>
+              <p>الدجاج او اللحم او الجمبرى المطبوخ على المقلاة الصينى مضاف اليه صلصة الفلفل الحار او التوابل الصينية</p>
+            </div>
+
+            <div class="row  mt-5">
+              <h5 class="col text-end secondary">السعرات الحرارية</h5>
+              <h5 class="col secondary text-start">( 70 سعرة حرارية )</h5>
+            </div>
+
+            <div>
+              <div class="row mt-5">
+                <h5 class="col text-end ">إختيار من : (إختر 1 فقط)</h5>
+                <h5 class="col  text-start"><arrow-down></arrow-down></h5>
+              </div>
+
+              <div class="lineBlock mt-sm-2">
+              </div>
+              <div class="row mt-5 row-cols-lg-2">
+                <h6 class="col text-end "><input  class="radio" type="radio">
+                  الحجم الوسط</h6>
+                <h6 class="col  text-start secondary">20 ريال سعودي</h6>
+                <h6 class="col text-end mt-5"><input  class="radio" type="radio">
+                  الحجم الكبير</h6>
+                <h6 class="col  text-start secondary mt-5">35 ريال سعودي</h6>
+              </div>
+
+            </div>
+
+
+
+            <div>
+              <div class="row mt-5">
+                <h5 class="col text-end ">هل ترغب في اضافة شيء؟</h5>
+                <h5 class="col  text-start"><arrow-down></arrow-down></h5>
+              </div>
+
+              <div class="lineBlock mt-sm-2">
+              </div>
+              <div class="row mt-5 row-cols-lg-2">
+                <h6 class="col text-end "><input  class="radio" type="checkbox">
+                  اضافة جبنة موزاريلا</h6>
+                <h6 class="col  text-start secondary">+7 ريال سعودي</h6>
+                <h6 class="col text-end mt-5"><input  class="" type="checkbox">
+                  اضافة صوص باربيكيو</h6>
+                <h6 class="col  text-start secondary mt-5">+10 ريال سعودي</h6>
+
+                <h6 class="col text-end mt-5"><input  class="" type="checkbox">
+                  اضافة سلطة طحينة</h6>
+                <h6 class="col  text-start secondary mt-5">+5 ريال سعودي</h6>
+              </div>
+
+            </div>
+
+
+
+            <div>
+              <div class="row mt-5">
+                <h5 class="col text-end ">هل ترغب في اضافة شيء؟</h5>
+                <h5 class="col  text-start"><arrow-down></arrow-down></h5>
+              </div>
+
+              <div class="lineBlock mt-sm-2">
+              </div>
+              <div class="row mt-5 row-cols-2">
+                <h6 class="col text-end "><input  class="radio" type="checkbox">
+                  ازالة جبنة موزاريلا</h6>
+
+                <h6 class="col text-end "><input  class="" type="checkbox">
+                  ازالة صوص باربيكيو</h6>
+
+
+                <h6 class="col text-end mt-5"><input  class="" type="checkbox">
+                  ازالة سلطة طحينة</h6>
+
+                <h6 class="col text-end mt-5"><input  class="" type="checkbox">
+                  ازالة سلطة طحينة</h6>
+
+              </div>
+
+            </div>
+
+            <div>
+              <div class="row mt-5 form-group">
+                <h5 class="col text-end " style="font-weight: bold">ملاحظات</h5>
+                <textarea class="form-control" name="" id="" cols="20" rows="5" placeholder="اضف ملاحظة"></textarea>
+
+              </div>
+            </div>
+
+            <div>
+              <div class="row mt-5 ">
+                <button @click="runModel()"  style="font-weight: bold" class="col btn btn-lg customBtn2 ml"><bascket></bascket>  اضافة</button>
+                <button style="font-weight: bold"  class="col btn btn-lg customBtn2 ">-  1  +</button>
+              </div>
+
+            </div>
+
+          </li>
+
+        </ul>
+      </div>
+
+
+
+      <div id="left" class="col boxShadow">
+        <div>
+          <div class="row mt-5">
+            <h5 class="col text-end ">التقييمات</h5>
+            <h5 class="col  text-start" style="font-weight: bold">4.5</h5>
+          </div>
+          <div class="text-start">
+            <star class="star"></star>
+            <star class="star "></star>
+            <star class="star "></star>
+            <star class="star "></star>
+          </div>
+
+          <div class="lineBlock mt-sm-2 mb-5">
+          </div>
+          <Comment></Comment>
+          <Comment></Comment>
+          <Comment></Comment>
+
+          <button class="btn-lg btn customBtn secondary mt-5">اضف تقييمك</button>
+
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <div class="mt-5">
+      <h3>الأفضل مبيعاً</h3>
+      <div class="row mt-5">
+
+        <div class="col">
+          <img src="1/breakfast-4.png" alt="" class="">
+        </div>
+        <div class="col">
+          <img src="1/breakfast-2.png" alt="" class="">
+        </div>
+        <div class="col">
+          <img src="1/breakfast-3.png" alt="" class="">
+        </div>
+        <div class="col">
+          <img src="1/breakfast-4.png" alt="" class="">
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <div class="text-center m-5 ">
+      <router-link class="back text-center" :to="{name:'HealthyBreakfast'}">رجوع الى القائمة السابقة</router-link>
+    </div>
+
+  </div>
+
+</div>
+</template>
+
+<script>
+import arrowDown from '../assets/1/arrowDown.svg'
+import Comment from "../components/Comment";
+import bascket from '../assets/5/Icon material-add-shopping-cart.svg'
+import Model from "../components/Model";
+import star from '../assets/icons/star-solid.svg'
+export default {
+  name: "FoodInfo",
+  data(){
+    return{
+      modelActive: false,
+      modelMessage: "test",
+    }
+  },
+  components:{
+    Model,
+    Comment,
+    arrowDown , bascket , star
+  },
+  methods:{
+    closeModel() {
+      this.modelActive = !this.modelActive;
+      this.email = "";
+      this.$router.push({name: "ViewOrder"})
+    },
+    runModel(){
+      this.modelActive = true;
+      window.scrollTo(0, 0);
+
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+.router {
+  color: #E2725A;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+
+.secondary {
+  color: #85311B;
+
+  &:hover {
+    color: #ef9a83;
+    cursor: pointer;
+  }
+}
+
+.line {
+  width: 64px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid;
+}
+
+.image {
+  height: 323px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.boxShadow {
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 10px;
+  margin: 32px 0px;
+
+
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+.lineBlock{
+  width: 100%;
+  padding-bottom: 16px;
+  border-bottom: 2px solid;
+}
+.customBtn{
+  box-shadow: 0px 3px 6px #00000029;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 236px;
+  font-weight: bold;
+
+
+}
+.customBtn2{
+ border: 1px solid;
+  border-radius: 10px;
+  margin: 32px 0px;
+}
+.ml{
+  margin-left: 32px;
+}
+.back{
+  color: #E2725A;
+  font-size: 24px;
+
+}
+.star{
+  fill: #FFCC00;
+  width: 32px;
+
+}
+</style>
