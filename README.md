@@ -11,7 +11,11 @@ https://santiago-resturant.web.app/
 
 ![alt text](https://github.com/ThamerAlluqmani/Santiago-restaurant/blob/main/pics/Capture1.PNG?raw=true)  
 
+![alt text](https://github.com/ThamerAlluqmani/Santiago-restaurant/blob/main/pics/Capture2.PNG?raw=true)  
 
+![alt text](https://github.com/ThamerAlluqmani/Santiago-restaurant/blob/main/pics/Capture3.PNG?raw=true)  
+
+![alt text](https://github.com/ThamerAlluqmani/Santiago-restaurant/blob/main/pics/Capture.4PNG.PNG?raw=true)  
 
 
 ## Project setup
