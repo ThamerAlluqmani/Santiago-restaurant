@@ -1,8 +1,21 @@
-# Santiago-resturant
+# Santiago-resturant (Not responsive for phones )
+ built by JavaScript language using Vue.js framework and it's static page.
+
 
 ## Live Demo 
 
 https://santiago-resturant.web.app/
+
+
+## Photos
+
+![alt text](https://github.com/[ThamerAlluqmani]/[Santiago-restaurant]/blob/[Main]/pics/Capture1.png?raw=true)  
+
+![alt text](https://github.com/[ThamerAlluqmani]/[Santiago-restaurant]/blob/[Main]/pics/Capture2.png?raw=true)  
+
+![alt text](https://github.com/[ThamerAlluqmani]/[Santiago-restaurant]/blob/[Main]/pics/Capture3.png?raw=true)  
+
+
 
 
 ## Project setup
