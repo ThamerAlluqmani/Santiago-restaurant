@@ -9,7 +9,7 @@ https://santiago-resturant.web.app/
 
 ## Photos
 
-![alt text](https://github.com/ThamerAlluqmani/Santiago-restaurant/tree/main/pics/Capture1.png?raw=true)  
+![alt text](https://github.com/ThamerAlluqmani/Santiago-restaurant/blob/main/pics/Capture1.PNG?raw=true)  
 
 
 
