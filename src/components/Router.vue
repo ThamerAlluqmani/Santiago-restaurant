@@ -1,13 +1,17 @@
 <template>
- <div class="col">
-     <router-link class="link " :to="{name:url}"><span>{{ title }}</span></router-link>
- </div>
+  <div class="col">
+    <router-link class="link " :to="{name:url}">
+      <h6>{{ title }}
+      </h6>
+
+    </router-link>
+  </div>
 </template>
 
 <script>
 export default {
   name: "Router",
-  props:['url' , 'title']
+  props: ['url', 'title']
 }
 </script>
 
@@ -16,28 +20,33 @@ export default {
   font-weight: bold;
 }
 
-span {
-  padding-bottom: 16px;
-}
-
-span:hover {
-  border-bottom: 2px solid;
-}
-
-.link {
-  cursor: pointer;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: black;
-
-  &:hover {
-    color: #D31512;
+h6 {
+  h6:hover {
+    padding-bottom: 16px;
+    border-bottom: 2px solid green;
   }
-
 }
-.router-link-active{
+
+.link{
+  display: inline-flex;
+  text-decoration: none;
+  color: black;
+  align-items: center;
+  margin-top: 32px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid transparent;
+  transition: .5s ease-in all;
+
+  &:hover{
+    border-bottom-color:  #D31512;
+
+  }
+}
+
+.router-link-active {
   color: #D31512;
   padding-bottom: 16px;
   border-bottom: 2px solid;
 }
+
 </style>

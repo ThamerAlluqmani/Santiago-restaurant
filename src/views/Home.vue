@@ -1,8 +1,9 @@
 <template>
-<div class="container mt-5">
+<div class=" mt-5">
 <Carousel></Carousel>
-  <h1 class="text-center mt-5">قائمة الطعام</h1>
-  <div class="row row-cols-3 mt-lg-5 mb-5">
+
+  <div class="row mt-5 mb-5">
+    <h1 class="text-center mt-5   mb-5">قائمة الطعام</h1>
    <Card :url="{name:'Breakfast'}" img="1/breakfast-4.png" title="الفطور"></Card>
    <Card :url="{name:'Lunch'}" img="1/breakfast-3.png" title="وجبات مميزة"></Card>
    <Card :url="{name:'Dinner'}" img="1/breakfast-2.png" title="وجبات العشاء"></Card>
@@ -23,5 +24,19 @@ import Card from "../components/Card";
 export default {
   name: "Home",
   components: { Card, Carousel},
+  data(){
+    return{
+      windowScreen: null
+    }
+  },
+
 };
 </script>
+<style lang="scss" scoped>
+.col-centered {
+  float: none!important;
+  margin-right: auto!important;
+  margin-left: auto!important;
+}
+
+</style>

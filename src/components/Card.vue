@@ -1,7 +1,7 @@
 <template>
- <div id="card" class="col">
+ <div id="card" class="col-sm-12 col-lg-4 col-md-6">
    <router-link class="link" :to="url">
-     <div  class="card" style="width: 18rem;">
+     <div  class="card">
        <img :src="img" class="card-img-top" alt="...">
        <div class="card-body">
          <p class="card-text text-center">{{title}}</p>
@@ -28,6 +28,11 @@ export default {
   color: #333333;
   text-transform: capitalize;
   opacity: 1;
+  @media (max-width: 767px) {
+   margin: 0 auto;
+
+  }
+
 }
 .link{
   text-decoration: none;
@@ -36,4 +41,6 @@ export default {
     color: #D31512;
    }
 }
+
+
 </style>

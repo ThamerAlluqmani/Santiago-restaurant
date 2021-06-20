@@ -1,8 +1,8 @@
 <template>
-  <div class="boxShadow">
+  <div class="boxShadow col-sm-12 col-lg-4 col-md-6">
     <router-link :to="url" class="link">
       <div class="image" :style="{backgroundImage: `url(${img})`}"></div>
-      <div class="card-body" style="max-height: 230px">
+      <div class="card-body">
         <div class="row">
           <h5 class="col text-end">{{ title }}
             <div class="line"></div>
