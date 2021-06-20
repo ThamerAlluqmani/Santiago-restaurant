@@ -25,12 +25,15 @@ export default {
 </script>
 
 <style lang="scss">
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&display=swap');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Tajawal", sans-serif;
+
 }
 
 .app {
@@ -55,7 +58,29 @@ export default {
   color: #fff;
 }
 
-.secondary{
-  color: #85311B;
+.boxShadow{
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 10px;
+  margin: 32px 0px;
+
 }
+.line{
+  border-bottom: 2px solid;
+  width: 25%;
+  padding-bottom: 12px;
+}
+.secondary{
+  color:#85311B;
+}
+.third{
+  color: #E2725A;
+}
+.bold{
+  font-weight: bold;
+}
+
+.icon{
+  width: 18px;
+}
+
 </style>

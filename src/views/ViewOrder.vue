@@ -25,106 +25,10 @@
       </div>
     </div>
 
-    <div class="boxShadow row row-cols-2 m-5 w-75" >
-      <img class="col" src="/2/dinner-2.png" alt="">
-     <div class="col">
-       <div class="card container ">
-         <div class="card-title">
-           <div class="row mt-5">
-             <h5 class="col text-end">بان تشيلي مع بطاطس
-               <div class="line"></div>
-             </h5>
-             <h5 class="col secondary text-start">20 ريال سعودي</h5>
-           </div>
-         </div>
-         <div class="card-body">
-           <p>الدجاج او اللحم او الجمبرى المطبوخ على المقلاة الصينى مضاف اليه صلصة الفلفل الحار او التوابل الصينية</p>
 
-           <div class="row mt-5">
-             <p class="col text-end">ازالة الصوص الحار</p>
-             <p class="col text-start secondary">تعديل</p>
-           </div>
-
-         </div>
-
-       </div>
-       <div class="row mt-5">
-         <button class="CustomBtn btn-lg  m-2 col  d-inline"><bascket></bascket> حذف</button>
-         <button class="CustomBtn btn-lg  m-2 col d-inline ">-  1  +</button>
-
-       </div>
-     </div>
-
-
-    </div>
-
-    <div class="boxShadow row row-cols-2 m-5 w-75" >
-      <img class="col" src="/2/dinner-2.png" alt="">
-      <div class="col">
-        <div class="card container ">
-          <div class="card-title">
-            <div class="row mt-5">
-              <h5 class="col text-end">بان تشيلي مع بطاطس
-                <div class="line"></div>
-              </h5>
-              <h5 class="col secondary text-start">20 ريال سعودي</h5>
-            </div>
-          </div>
-          <div class="card-body">
-            <p>الدجاج او اللحم او الجمبرى المطبوخ على المقلاة الصينى مضاف اليه صلصة الفلفل الحار او التوابل الصينية</p>
-
-            <div class="row mt-5">
-              <p class="col text-end">ازالة الصوص الحار</p>
-              <p class="col text-start secondary">تعديل</p>
-            </div>
-
-          </div>
-
-        </div>
-        <div class="row mt-5">
-          <button class="CustomBtn btn-lg  m-2 col  d-inline"><bascket></bascket> حذف</button>
-          <button class="CustomBtn btn-lg  m-2 col d-inline ">-  1  +</button>
-
-        </div>
-      </div>
-
-
-    </div>
-
-
-    <div class="boxShadow row row-cols-2 m-5 w-75" >
-      <img class="col" src="/2/dinner-2.png" alt="">
-      <div class="col">
-        <div class="card container ">
-          <div class="card-title">
-            <div class="row mt-5">
-              <h5 class="col text-end">بان تشيلي مع بطاطس
-                <div class="line"></div>
-              </h5>
-              <h5 class="col secondary text-start">20 ريال سعودي</h5>
-            </div>
-          </div>
-          <div class="card-body">
-            <p>الدجاج او اللحم او الجمبرى المطبوخ على المقلاة الصينى مضاف اليه صلصة الفلفل الحار او التوابل الصينية</p>
-
-            <div class="row mt-5">
-              <p class="col text-end">ازالة الصوص الحار</p>
-              <p class="col text-start secondary">تعديل</p>
-            </div>
-
-          </div>
-
-        </div>
-        <div class="row mt-5">
-          <button class="CustomBtn btn-lg  m-2 col  d-inline"><bascket></bascket> حذف</button>
-          <button class="CustomBtn btn-lg  m-2 col d-inline ">-  1  +</button>
-
-        </div>
-      </div>
-
-
-    </div>
-
+    <Card3></Card3>
+    <Card3></Card3>
+    <Card3></Card3>
 
     <div>
       <button class="text-white text-center btn d-inline  m-5" style="color: black;font-weight: bold; font-size: 24px">التالي</button>
@@ -136,11 +40,12 @@
 </template>
 
 <script>
-import bascket from '../assets/5/Icon material-add-shopping-cart.svg'
+import Card3 from "../components/Card3";
 export default {
   name: "Breakfast",
   components:{
-    bascket
+    Card3
+
   }
 }
 </script>
