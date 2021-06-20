@@ -14,7 +14,7 @@
         <Router :url="'Spicials'" title="الأكلات المميزة"></Router>
       </div>
     </div>
-    <div class="row row-cols-3 mt-lg-5 mb-5">
+    <div class="row mt-5 mb-5">
       <Card :url="{name:'Lunch'}"  img="2/dinner-6.png" title="الفطور"></Card>
       <Card :url="{name:'Lunch'}"  img="1/breakfast-3.png" title="وجبات مميزة"></Card>
       <Card :url="{name:'Lunch'}"  img="1/breakfast-2.png" title="وجبات العشاء"></Card>

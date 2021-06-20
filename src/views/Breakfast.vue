@@ -15,7 +15,7 @@
      </div>
    </div>
 
-    <div class="row row-cols-3 mt-lg-5 mb-5">
+    <div class="row mt-5 mb-5">
       <Card :url="{name:'HealthyBreakfast'}" img="2/dinner-6.png" title="الفطور"></Card>
       <Card :url="{name:'HealthyBreakfast'}" img="2/dinner-1.png" title="فطور العائلات"></Card>
       <Card :url="{name:'HealthyBreakfast'}" img="2/dinner-2.png" title="فطور الأطفال"></Card>
