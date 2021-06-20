@@ -114,7 +114,11 @@
             <div>
               <div class="row mt-5 ">
                 <button @click="runModel()"  style="font-weight: bold" class="col btn btn-lg customBtn2 ml"><bascket></bascket>  اضافة</button>
-                <button style="font-weight: bold"  class="col btn btn-lg customBtn2 ">-  1  +</button>
+                <button :class="number === 0 ? 'disabled' : ''" style="font-weight: bold"  class="col btn btn-lg customBtn2  ">
+                  <span @click="number--">-</span>
+                  <span>{{number}}</span>
+                  <span @click="number++">+</span>
+                </button>
               </div>
 
             </div>
@@ -197,6 +201,7 @@ export default {
     return{
       modelActive: false,
       modelMessage: "test",
+      number: 1
     }
   },
   components:{
@@ -296,5 +301,8 @@ img {
   fill: #FFCC00;
   width: 32px;
 
+}
+span{
+  margin: 5%;
 }
 </style>
