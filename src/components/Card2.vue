@@ -1,5 +1,5 @@
 <template>
-  <div class="boxShadow col-sm-12 col-lg-4 col-md-6">
+  <div id="card" class="boxShadow col-sm-12 col-lg-4 col-md-6">
     <router-link :to="url" class="link">
       <div class="image" :style="{backgroundImage: `url(${img})`}"></div>
       <div class="card-body">
@@ -63,5 +63,10 @@ export default {
   text-decoration: none;
   color: black;
 }
-
+#card{
+  transition: .5s ease all;
+  &:hover{
+    transform: rotateZ(-1deg) scale(1.01);
+  }
+}
 </style>

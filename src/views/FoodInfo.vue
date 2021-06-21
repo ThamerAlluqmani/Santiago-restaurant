@@ -12,7 +12,7 @@
 
 
     <div class="row">
-      <div id="right" class="col">
+      <div id="right" class="col-sm-12 col-lg-6 col-md-6">
         <ul class="list-group list-group-flush">
           <li class="list-group-item">
             <div class="row  mt-5">
@@ -130,7 +130,7 @@
 
 
 
-      <div id="left" class="col boxShadow">
+      <div id="left" class="col-sm-12 col-lg-6 col-md-6 boxShadow">
         <div>
           <div class="row mt-5">
             <h5 class="col text-end ">التقييمات</h5>
@@ -149,7 +149,7 @@
           <Comment></Comment>
           <Comment></Comment>
 
-          <button class="btn-lg btn customBtn secondary mt-5">اضف تقييمك</button>
+          <button class="btn-lg btn customBtn secondary mt-5 mb-5">اضف تقييمك</button>
 
         </div>
 
@@ -160,20 +160,18 @@
 
     <div class="mt-5">
       <h3>الأفضل مبيعاً</h3>
-      <div class="row mt-5">
+      <div class="row mt-5 ">
 
-        <div class="col">
-          <img src="1/breakfast-4.png" alt="" class="">
+        <div class="col-lg-4 col-md-6 col-sm-12 p-5">
+          <img src="1/breakfast-4.png" alt="" class="card-img">
         </div>
-        <div class="col">
-          <img src="1/breakfast-2.png" alt="" class="">
+        <div class="col-lg-4 col-md-6 col-sm-12 p-5">
+          <img src="1/breakfast-2.png" alt="" class="card-img">
         </div>
-        <div class="col">
-          <img src="1/breakfast-3.png" alt="" class="">
+        <div class="col-lg-4 col-md-6 col-sm-12 p-5">
+          <img src="1/breakfast-3.png" alt="" class="card-img">
         </div>
-        <div class="col">
-          <img src="1/breakfast-4.png" alt="" class="">
-        </div>
+
 
       </div>
     </div>
@@ -304,5 +302,8 @@ img {
 }
 span{
   margin: 5%;
+}
+.card-img{
+  max-width: 250px;
 }
 </style>

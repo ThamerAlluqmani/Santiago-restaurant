@@ -1,8 +1,9 @@
 <template>
  <div id="card" class="col-sm-12 col-lg-4 col-md-6">
    <router-link class="link" :to="url">
+     <img :src="img" class="card-img-top" alt="...">
      <div  class="card">
-       <img :src="img" class="card-img-top" alt="...">
+
        <div class="card-body">
          <p class="card-text text-center">{{title}}</p>
        </div>
@@ -41,6 +42,22 @@ export default {
     color: #D31512;
    }
 }
+p{
+  align-items: center;
+  margin-top: 12px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid transparent;
+  transition: .5s ease-in all;
+  &:hover{
+    border-bottom-color:  #D31512;
+  }
+}
 
+#card{
+  transition: .5s ease all;
+  &:hover{
+    transform: rotateZ(-1deg) scale(1.01);
+  }
+}
 
 </style>

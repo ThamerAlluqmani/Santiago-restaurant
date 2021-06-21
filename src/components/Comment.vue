@@ -1,15 +1,20 @@
 <template>
 
-  <div class="card">
+  <div class="card mb-2">
     <div class="card-body">
-      <div>
-        <user-icon></user-icon>
-      </div>
       <div class="row">
-        <span class="text-end col">عبدالله محمد</span>
-        <span class="text-start col text-muted">منذ 3 اسابيع</span>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+          <user-icon></user-icon>
+          <span class="text-end" style="padding-right: 8px">عبدالله محمد</span>
+        </div>
+        <div class="col-lg-4 col-md-1 col-sm-1">
+
+        </div>
+        <div class="col-lg-4 col-md-5 col-sm-5">
+          <span class="text-start  text-muted">منذ 3 اسابيع</span>
+        </div>
       </div>
-      <div>
+      <div class="mt-2">
         <star class="icon"></star>
         <star class="icon"></star>
         <star class="icon"></star>
@@ -37,7 +42,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .card {
 
 }
@@ -50,6 +55,14 @@ span {
 .icon {
   fill: #FFCC00;
   width: 16px;
+
+}
+.card{
+
+  transition: .5s ease all;
+&:hover{
+   transform: rotateZ(-1deg) scale(1.01);
+ }
 
 }
 </style>

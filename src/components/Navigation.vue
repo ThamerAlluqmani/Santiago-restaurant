@@ -1,32 +1,34 @@
 <template>
   <div id="nav" class="mt-5">
     <div v-if="this.$route.name === 'HealthyBreakfast'" class="right">
-      <div class="icon ms-4">
-        تابعنا :
+    <div class="row"  v-show="!this.mobile">
+      <div class="icon  col-lg-4 col-md-6 col-sm-12">تابعنا
       </div>
 
-      <div class="icon ms-4">
+      <div class="icon2 col-lg-4 col-md-6 col-sm-12">
         <twitter class="icon2"></twitter>
       </div>
 
 
 
-      <div class="icon ms-4">
-       <instagram class="icon2"></instagram>
+      <div class="icon2  col-lg-4 col-md-6 col-sm-12 ">
+        <instagram class="icon2"></instagram>
       </div>
+
+    </div>
 
 
     </div>
 
-    <div v-else class="right row">
+    <div v-else class="right row"   v-show="!this.mobile">
       <div class="icon col">
-        <menu-icon class="icon"></menu-icon>
+        <menu-icon class=""></menu-icon>
       </div>
 
 
         <router-link class="col" :to="{name:'ViewOrder'}">
           <div class="icon col">
-          <shopping-cart  class="icon"></shopping-cart>
+          <shopping-cart  class=""></shopping-cart>
           </div>
         </router-link>
 
@@ -35,7 +37,7 @@
 
       <router-link class="col" :to="{name:'Login'}">
         <div class="icon col">
-          <user-icon class="icon"></user-icon>
+          <user-icon class=""></user-icon>
         </div>
       </router-link>
 
@@ -45,14 +47,21 @@
    <router-link :to="{name:'Home'}">
      <img src="../assets/logo.png" alt="">
    </router-link>
-    <div class="dropdown left">
-      <button class="btn  dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-        <world class="icon"></world>
-        العربية
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-        <li><button class="dropdown-item" type="button">English</button></li>
-      </ul>
+    <div class="left"  v-show="!this.mobile">
+      <div class="btn">
+        <world class=""></world>
+        <select class="p-2">
+          <option class="" value="">
+            العربية
+          </option>
+          <option class="" value="">
+            English
+          </option>
+        </select>
+      </div>
+
+
+
     </div>
   </div>
 </template>
@@ -69,6 +78,27 @@ export default {
   name: "Navigation",
   components: {
     userIcon, menuIcon, shoppingCart, world , twitter , instagram
+  },
+  data(){
+    return{
+      mobile:null
+
+    }
+  },
+  created() {
+    window.addEventListener('resize', this.checkScreen);
+    this.checkScreen();
+  },
+  methods:{
+    checkScreen(){
+      this.windowWidth = window.innerWidth;
+      if (this.windowWidth <= 750){
+        this.mobile = true;
+        return;
+      }
+      this.mobile = false;
+      return;
+    }
   }
 }
 </script>
@@ -80,14 +110,27 @@ export default {
 }
 
 .right {
-  margin-left: 25%;
   cursor: pointer;
+  @media (min-width: 700px) {
+    margin-left: 25%;
+
+  }
 
 
 }
 
 .left {
-  margin-right: 25%;
+
+  @media (min-width: 700px) {
+    margin-right: 25%;
+
+  }
+  @media (max-width: 600px) {
+
+
+  }
+
+
   width: 155px;
   height: 48px;
   cursor: pointer;
@@ -104,5 +147,11 @@ export default {
 
   }
 }
-
+select{
+  font-family: 'FontAwesome', 'sans-serif'!important;
+  border: none;
+}
+.icon2{
+  width: 27px;
+}
 </style>

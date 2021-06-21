@@ -1,6 +1,6 @@
 <template>
 <div>
-  <div class="card mb-3 p-5" style="max-width: 840px;">
+  <div id="card" class="card mb-3 p-5" style="max-width: 840px;">
     <div class="row g-0">
       <div class="col-md-4">
         <img src="../assets/5/dinner-2.png" alt="...">
@@ -20,29 +20,54 @@
           <div class="mt-5">
             <h5 class="third">ملاحظات</h5>
            <div class="row mt-3">
-             <p class="card-text text-muted  col-6 text-end">ازالة الصوص الحار</p>
+             <textarea class="card-text text-muted  col-6 text-end border-white">ازالة الصوص الحار</textarea>
              <p class="card-text text-muted col-6 text-start"><Edit class="icon"></Edit>تعديل</p>
            </div>
           </div>
         </div>
       </div>
 
+
+
       <div class="row">
-        <div class="col-lg-7 col-md-6  col-sm-12"></div>
-        <div class="col-lg-5 col-md-5 col-sm-auto">
-          <div class="row">
-            <button :class="number === 0 ? 'disabled' : ''" class="customBtn btn col">
-              <Delete class="icon d-inline"></Delete>
-              <span class="col">حذف</span>
-            </button>
-            <div :class="number === 0 ? 'disabled' : ''" class="customBtn btn btn-lg col-lg-6 col-sm-12 col-md-6">
-              <span @click="number--" class="col-lg-4 col-md-4 col-sm-4">-</span>
-              <span  class="col-lg-4 col-md-4 col-sm-4">{{number}}</span>
-              <span @click="number++" class="col-lg-4 col-md-4 col-sm-4">+</span>
-            </div>
-          </div>
+        <div class="col-lg-7"></div>
+        <button class="customBtn col-lg-2">
+          <Delete class="icon"></Delete>
+          <span @click="number=0">حذف</span>
+        </button>
+        <div class="customBtn col-lg-2 text-center p-2">
+          <span @click="number--">-</span>
+          <span class="px-2">{{number}}</span>
+          <span @click="number++" class="">+</span>
         </div>
       </div>
+
+
+
+
+
+
+<!--      <div class="row">-->
+<!--        <div class="col-lg-7 col-md-6  col-sm-12"></div>-->
+<!--        <div class="col-lg-3 col-md-5 col-sm-auto">-->
+<!--          <div class="row">-->
+<!--           <div class="col">-->
+<!--             <button :class="number === 0 ? 'disabled' : ''" class="customBtn btn ">-->
+<!--               <Delete class="icon d-inline"></Delete>-->
+<!--               <span class="col">حذف</span>-->
+<!--             </button>-->
+
+<!--           </div>-->
+<!--            <div class="col">-->
+<!--              <div :class="number === 0 ? 'disabled' : ''" class="customBtn btn btn-lg">-->
+<!--                <span @click="number&#45;&#45;" class="col-lg-4 col-md-4 col-sm-4">-</span>-->
+<!--                <span  class="col-lg-4 col-md-4 col-sm-4">{{number}}</span>-->
+<!--                <span @click="number++" class="col-lg-4 col-md-4 col-sm-4">+</span>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
 
     </div>
   </div>
@@ -62,7 +87,8 @@ name: "Card3",
   components:{
 
   Edit, Delete
-  }
+  },
+
 }
 </script>
 
@@ -76,13 +102,11 @@ name: "Card3",
 .customBtn{
   border: 1px solid;
   border-radius: 10px;
-
+  background-color: white;
   margin: 32px 12px;
   font-weight: bold;
   font-size: 18px;
-  display: flex;
   height: 48px;
-  width: 100%;
 
 
 
@@ -93,5 +117,12 @@ span{
 }
 .icon{
   width: 26px;
+}
+
+#card{
+  transition: .5s ease all;
+  &:hover{
+    transform: rotateZ(-1deg) scale(1.01);
+  }
 }
 </style>
