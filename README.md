@@ -1,4 +1,4 @@
-# Santiago-resturant (Not responsive for phones )
+# Santiago-resturant
  built by JavaScript language using Vue.js framework and it's static page.
 
 
