@@ -23,7 +23,7 @@
 
          <div v-show="displayItem" class="mt-5">
            <label style="font-weight: bold; cursor: pointer" for="check">رمز التحقق</label>
-           <input style="direction: ltr" id="check" name="phone" type="tel"  class="form-control mt-3">
+           <input style="direction: ltr" id="check" name="phone" type="tel"  class="boxShadow form-control mt-3">
          </div>
          <h5 v-show="displayItem" class="text-center mt-5">اعادة الإرسال بعد 00:23</h5>
          <button @click="displayHidden()" class="btn btn-lg  text-white mt-5">{{button}}</button>
@@ -87,5 +87,14 @@ button{
 &:hover{
    color: #E2725A;
  }
+}
+
+input {
+  border: none;
+  font-weight: bold;
+
+  &:focus {
+    outline: none;
+  }
 }
 </style>

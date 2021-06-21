@@ -1,72 +1,103 @@
 <template>
-<div class="mb-5 mt-5">
-  <div class="container mt-5 mb-5">
+  <div class="mb-5 mt-5">
+    <div class="container mt-5 mb-5">
 
       <div class="boxShadow cardCenter" style="max-width: 720px">
         <h3 class="text-center mt-5">التسجيل لأول مره
-          <div class="line text-center"></div></h3>
-       <div class="card-body ">
-         <div class="mt-5 row row-cols-2">
-           <div class="col">
-             <label style="font-weight: bold; cursor: pointer" for="phone">الاسم الاول</label>
-             <input id="phone" name="phone" type="text" value="عبدالله" class="form-control mt-3">
-           </div>
+          <div class="line text-center"></div>
+        </h3>
+        <div class="card-body ">
+          <div class="mt-5 row row-cols-2">
+            <div class="col">
+              <label style="font-weight: bold; cursor: pointer" for="phone">الاسم الاول</label>
+              <div class="boxShadow">
+                <user class="icon"></user>
+                <input id="phone" name="phone" type="text" value="عبدالله" class="">
+              </div>
+            </div>
             <div class="col">
               <label style="font-weight: bold; cursor: pointer" for="phone">الاسم الثاني</label>
-              <input id="test1" name="test1" type="text" value="محمد" class="form-control mt-3">
+              <div class="boxShadow">
+                <users class="icon"></users>
+                <input id="phone" name="phone" type="text" value="محمد" class="">
+              </div>
             </div>
-         </div>
+          </div>
           <div class="mt-5">
-            <label style="font-weight: bold; cursor: pointer" for="phone">البريد الإلكتروني</label>
-            <input id="test2" name="phone" type="email" value="demo@gmail.com" class="form-control mt-3">
+            <label style="font-weight: bold; cursor: pointer" for="email">البريد الإلكتروني</label>
+            <div class="boxShadow">
+              <email class="icon"></email>
+              <input id="email" name="email" type="email" value="demo@gmail.com" class="">
+            </div>
           </div>
 
 
-         <div class="mt-5 row row-cols-2">
-           <div class="col">
-             <label style="font-weight: bold; cursor: pointer" for="sex">الجنس</label>
-             <div class="row form-control">
-              <div class="col">
-                <input id="sex" name="sex" type="radio" class="mt-3">
-                <span style="margin-right: 8px">ذكر</span>
+          <div class="mt-5 row row-cols-2">
+            <div class="col">
+              <label style="font-weight: bold; cursor: pointer" for="sex">الجنس</label>
+              <div class="row boxShadow p-2">
+                <div class="col">
+                  <input id="sex" name="sex" type="radio" class="mt-3">
+                  <span style="margin-right: 8px">ذكر</span>
+                </div>
+                <div class="col">
+                  <input id="sex" name="sex" type="radio" class="mt-3">
+                  <span style="margin-right: 8px">انثى</span>
+                </div>
               </div>
-               <div class="col">
-                 <input id="sex" name="sex" type="radio" class="mt-3">
-                 <span style="margin-right: 8px">انثى</span>
-               </div>
-             </div>
-           </div>
-           <div class="col">
-             <label style="font-weight: bold; cursor: pointer" for="phone">رقم الجوال</label>
-             <input id="phone" style="direction: ltr" name="phone" type="text" placeholder="+966" class="form-control mt-3">
-           </div>
-         </div>
+            </div>
+            <div class="col">
+              <label style="font-weight: bold; cursor: pointer" for="phone">رقم الجوال</label>
+              <div class="input-group mb-3 boxShadow">
+                <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                <button class=" btn bg-white dropdown-toggle btn-lg" type="button" data-bs-toggle="dropdown" aria-expanded="false">+966</button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Separated link</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
 
-         <div v-show="displayItem" class="mt-5">
-           <label style="font-weight: bold; cursor: pointer" for="check">رمز التحقق</label>
-           <input style="direction: ltr" id="check" name="phone" type="tel"  class="form-control mt-3">
-         </div>
-         <h5 v-show="displayItem" class="text-center mt-5">اعادة الإرسال بعد 00:23</h5>
-         <button @click="displayHidden()" class="btn btn-lg  text-white mt-5">{{button}}</button>
-         <router-link :to="{name:'Login'}" class="secondary text-decoration-none" style="font-size: 16px; font-weight: bold">مسجل مسبقاً ؟</router-link>
-       </div>
+          <div v-show="displayItem" class="mt-5">
+            <label style="font-weight: bold; cursor: pointer" for="check">رمز التحقق</label>
+            <div class="form-control">
+              <input id="check" name="check" type="text" value="2342" class="">
+            </div>
+          </div>
+          <h5 v-show="displayItem" class="text-center mt-5">اعادة الإرسال بعد 00:23</h5>
+          <button @click="displayHidden()" class="btn btn-lg  text-white mt-5">{{ button }}</button>
+          <router-link :to="{name:'Login'}" class="secondary text-decoration-none"
+                       style="font-size: 16px; font-weight: bold">مسجل مسبقاً ؟
+          </router-link>
+        </div>
       </div>
+    </div>
   </div>
-</div>
 </template>
 
 <script>
+import user from '../assets/icons/user-solid.svg'
+import users from '../assets/icons/users-solid.svg'
+import email from '../assets/icons/mail-bulk-solid.svg'
+
 export default {
   name: "Login",
-  data(){
-    return{
-      button:"التسجيل",
+  components: {
+    users, user, email
+  },
+  data() {
+    return {
+      button: "التسجيل",
       displayItem: false,
     }
   },
-  methods:{
-    displayHidden(){
+  methods: {
+    displayHidden() {
       this.button = "التحقق"
       this.displayItem = true;
 
@@ -83,33 +114,51 @@ export default {
   margin: 32px 0px;
 
 }
-.cardCenter{
+
+.cardCenter {
   margin: auto auto;
 
 
 }
+
 .line {
   width: 15%;
   padding-bottom: 16px;
   border-bottom: 2px solid;
   margin: 0 auto;
 }
-label{
+
+label {
   font-weight: bold;
   font-size: 16px;
 }
-button{
+
+button {
   display: block;
   margin-right: auto;
   margin-left: auto;
   background-color: #333333;
 }
 
-.secondary{
+.secondary {
   color: #85311B;
-  &:hover{
-  color: #E2725A;
-   }
+
+  &:hover {
+    color: #E2725A;
+  }
 }
 
+.icon {
+  width: 32px;
+  padding: 5px;
+}
+
+input {
+  border: none;
+  font-weight: bold;
+
+  &:focus {
+    outline: none;
+  }
+}
 </style>
