@@ -25,15 +25,14 @@
          <div class="mt-5 row row-cols-2">
            <div class="col">
              <label style="font-weight: bold; cursor: pointer" for="sex">الجنس</label>
-             <div class="row row-cols-2 form-control">
+             <div class="row form-control">
               <div class="col">
                 <input id="sex" name="sex" type="radio" class="mt-3">
-                <span style="margin-right: 12px">ذكر</span>
+                <span style="margin-right: 8px">ذكر</span>
               </div>
                <div class="col">
-
                  <input id="sex" name="sex" type="radio" class="mt-3">
-                 <span style="margin-right: 12px">انثى</span>
+                 <span style="margin-right: 8px">انثى</span>
                </div>
              </div>
            </div>

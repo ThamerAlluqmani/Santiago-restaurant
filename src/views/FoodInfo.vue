@@ -1,6 +1,6 @@
 <template>
 <div>
-  <Model v-if="true" :model-message="this.modelMessage" v-on:close-model="closeModel()"/>
+  <Model v-if="modelActive" :model-message="this.modelMessage" v-on:close-model="closeModel()"/>
 
   <div class="container mt-5">
     <h1 class="text-center mt-5">قائمة الطعام</h1>

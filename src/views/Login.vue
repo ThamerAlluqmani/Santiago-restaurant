@@ -8,7 +8,17 @@
        <div class="card-body ">
           <div class="mt-5">
             <label style="font-weight: bold; cursor: pointer" for="phone">رقم الجوال</label>
-            <input style="direction: ltr" id="phone" name="phone" type="tel" placeholder="+966" class="form-control mt-3">
+            <div class="input-group mb-3 boxShadow">
+              <input type="text" class="form-control" aria-label="Text input with dropdown button">
+              <button class=" btn bg-white dropdown-toggle btn-lg" type="button" data-bs-toggle="dropdown" aria-expanded="false">+966</button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Separated link</a></li>
+              </ul>
+            </div>
           </div>
 
          <div v-show="displayItem" class="mt-5">

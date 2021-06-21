@@ -21,9 +21,11 @@
     </div>
 
     <div v-else class="right row"   v-show="!this.mobile">
-      <div class="icon col">
-        <menu-icon class=""></menu-icon>
-      </div>
+      <router-link class="col" :to="{name:'Home'}">
+        <div class="icon col">
+          <menu-icon  class=""></menu-icon>
+        </div>
+      </router-link>
 
 
         <router-link class="col" :to="{name:'ViewOrder'}">
