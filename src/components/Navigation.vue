@@ -1,19 +1,12 @@
 <template>
   <div id="nav" class="mt-5">
-    <div v-if="this.$route.name === 'HealthyBreakfast'" class="right">
-    <div class="row"  v-show="!this.mobile">
-      <div class="icon  col-lg-4 col-md-6 col-sm-12">تابعنا
-      </div>
-
-      <div class="icon2 col-lg-4 col-md-6 col-sm-12">
-        <twitter class="icon2"></twitter>
-      </div>
+    <div v-if="this.$route.name === 'HealthyBreakfast'" class="right row">
 
 
-
-      <div class="icon2  col-lg-4 col-md-6 col-sm-12 ">
-        <instagram class="icon2"></instagram>
-      </div>
+    <div class="col"  v-show="!this.mobile">
+      <span class="">تابعنا</span>
+      <twitter class="icon2 mx-2"></twitter>
+      <instagram class="icon2"></instagram>
 
     </div>
 

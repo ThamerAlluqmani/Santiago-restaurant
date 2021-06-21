@@ -1,6 +1,6 @@
 <template>
   <div class="container mt-5 center">
-    <div class="wrapper">
+    <div v-show="!this.mobile" class="wrapper">
       <div class="margin-area">
         <div class="dot two"></div>
         <div class="dot three"></div>
@@ -46,6 +46,27 @@ export default {
   components:{
     Card3
 
+  },
+  data(){
+    return{
+      mobile:null
+
+    }
+  },
+  created() {
+    window.addEventListener('resize', this.checkScreen);
+    this.checkScreen();
+  },
+  methods:{
+    checkScreen(){
+      this.windowWidth = window.innerWidth;
+      if (this.windowWidth <= 750){
+        this.mobile = true;
+        return;
+      }
+      this.mobile = false;
+      return;
+    }
   }
 }
 </script>
