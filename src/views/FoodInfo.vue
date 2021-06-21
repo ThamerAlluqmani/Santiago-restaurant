@@ -1,6 +1,6 @@
 <template>
 <div>
-  <Model v-if="modelActive" :model-message="this.modelMessage" v-on:close-model="closeModel()"/>
+  <Model v-if="true" :model-message="this.modelMessage" v-on:close-model="closeModel()"/>
 
   <div class="container mt-5">
     <h1 class="text-center mt-5">قائمة الطعام</h1>
@@ -39,13 +39,33 @@
 
               <div class="lineBlock mt-sm-2">
               </div>
-              <div class="row mt-5 row-cols-lg-2">
-                <h6 class="col text-end "><input  class="radio" type="radio">
-                  الحجم الوسط</h6>
-                <h6 class="col  text-start secondary">20 ريال سعودي</h6>
-                <h6 class="col text-end mt-5"><input  class="radio" type="radio">
-                  الحجم الكبير</h6>
-                <h6 class="col  text-start secondary mt-5">35 ريال سعودي</h6>
+
+              <div class="row mt-5">
+
+
+                <div class="row col-12">
+
+                  <h6 class="col"><input  class="radio" type="radio">
+                    الحجم الوسط</h6>
+                  <div class="col"></div>
+                  <h6 class="col secondary">20 ريال سعودي</h6>
+                </div>
+
+                <div class="mt-3"></div>
+
+
+                <div class="row col-12">
+
+                  <h6 class="col"><input  class="radio" type="radio">
+                    الحجم الكبير</h6>
+                  <div class="col"></div>
+                  <h6 class="col secondary">35 ريال سعودي</h6>
+                </div>
+
+
+
+
+
               </div>
 
             </div>
@@ -60,17 +80,43 @@
 
               <div class="lineBlock mt-sm-2">
               </div>
-              <div class="row mt-5 row-cols-lg-2">
-                <h6 class="col text-end "><input  class="radio" type="checkbox">
-                  اضافة جبنة موزاريلا</h6>
-                <h6 class="col  text-start secondary">+7 ريال سعودي</h6>
-                <h6 class="col text-end mt-5"><input  class="" type="checkbox">
-                  اضافة صوص باربيكيو</h6>
-                <h6 class="col  text-start secondary mt-5">+10 ريال سعودي</h6>
+              <div class="row mt-5">
 
-                <h6 class="col text-end mt-5"><input  class="" type="checkbox">
-                  اضافة سلطة طحينة</h6>
-                <h6 class="col  text-start secondary mt-5">+5 ريال سعودي</h6>
+
+                <div class="row col-12">
+
+                  <h6 class="col"><input  class="radio" type="checkbox">
+                    إضافة جبنة موتزاريلا</h6>
+                  <div class="col"></div>
+                  <h6 class="col secondary">+7 ريال سعودي</h6>
+                </div>
+
+                <div class="mt-3"></div>
+
+
+                <div class="row col-12">
+
+                  <h6 class="col"><input  class="radio" type="checkbox">
+                   إضافة جبنة موتزاريلا</h6>
+                  <div class="col"></div>
+                  <h6 class="col secondary">+7 ريال سعودي</h6>
+                </div>
+
+                <div class="mt-3"></div>
+
+
+                <div class="row col-12">
+
+                  <h6 class="col"><input  class="radio" type="checkbox">
+                    إضافة جبنة موتزاريلا</h6>
+                  <div class="col"></div>
+                  <h6 class="col secondary">+7 ريال سعودي</h6>
+                </div>
+
+
+
+
+
               </div>
 
             </div>
@@ -127,6 +173,44 @@
 
         </ul>
       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
