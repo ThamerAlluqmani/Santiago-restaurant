@@ -119,10 +119,5 @@ span{
   width: 26px;
 }
 
-#card{
-  transition: .5s ease all;
-  &:hover{
-    transform: rotateZ(-1deg) scale(1.01);
-  }
-}
+
 </style>
