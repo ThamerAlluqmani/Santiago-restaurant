@@ -77,5 +77,4 @@ export default {
 .icon{
   width: 18px;
 }
-
 </style>

@@ -9,17 +9,17 @@
         <div class="card-body ">
           <div class="mt-5 row row-cols-2">
             <div class="col">
-              <label style="font-weight: bold; cursor: pointer" for="phone">الاسم الاول</label>
+              <label style="font-weight: bold; cursor: pointer" for="first">الاسم الاول</label>
               <div class="boxShadow">
                 <user class="icon"></user>
-                <input id="phone" name="phone" type="text" value="عبدالله" class="">
+                <input id="first" name="first" type="text"  class="">
               </div>
             </div>
             <div class="col">
-              <label style="font-weight: bold; cursor: pointer" for="phone">الاسم الثاني</label>
+              <label style="font-weight: bold; cursor: pointer" for="second">الاسم الثاني</label>
               <div class="boxShadow">
                 <users class="icon"></users>
-                <input id="phone" name="phone" type="text" value="محمد" class="">
+                <input id="second" name="second" type="text"  class="">
               </div>
             </div>
           </div>
@@ -27,7 +27,7 @@
             <label style="font-weight: bold; cursor: pointer" for="email">البريد الإلكتروني</label>
             <div class="boxShadow">
               <email class="icon"></email>
-              <input id="email" name="email" type="email" value="demo@gmail.com" class="">
+              <input id="email" name="email" type="email"  class="">
             </div>
           </div>
 
@@ -37,11 +37,11 @@
               <label style="font-weight: bold; cursor: pointer" for="sex">الجنس</label>
               <div class="row boxShadow p-2">
                 <div class="col">
-                  <input id="sex" name="sex" type="radio" class="mt-3">
+                  <input id="sex" name="sex" type="radio" class="radio mt-3">
                   <span style="margin-right: 8px">ذكر</span>
                 </div>
                 <div class="col">
-                  <input id="sex" name="sex" type="radio" class="mt-3">
+                  <input id="sex" name="sex" type="radio" class="radio mt-3">
                   <span style="margin-right: 8px">انثى</span>
                 </div>
               </div>
@@ -49,7 +49,7 @@
             <div class="col">
               <label style="font-weight: bold; cursor: pointer" for="phone">رقم الجوال</label>
               <div class="input-group mb-3 boxShadow">
-                <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                <input name="phone" id="phone" type="tel" class="form-control" aria-label="Text input with dropdown button">
                 <button class=" btn bg-white dropdown-toggle btn-lg" type="button" data-bs-toggle="dropdown" aria-expanded="false">+966</button>
                 <ul class="dropdown-menu dropdown-menu-end">
                   <li><a class="dropdown-item" href="#">Action</a></li>
@@ -65,8 +65,9 @@
 
           <div v-show="displayItem" class="mt-5">
             <label style="font-weight: bold; cursor: pointer" for="check">رمز التحقق</label>
-            <div class="form-control">
-              <input id="check" name="check" type="text" value="2342" class="">
+            <div class="boxShadow">
+
+              <input id="check" name="check" type="text"  class="">
             </div>
           </div>
           <h5 v-show="displayItem" class="text-center mt-5">اعادة الإرسال بعد 00:23</h5>
@@ -82,8 +83,8 @@
 
 <script>
 import user from '../assets/icons/user-solid.svg'
-import users from '../assets/icons/users-solid.svg'
-import email from '../assets/icons/mail-bulk-solid.svg'
+import users from '../assets/icons/user-friends-solid.svg'
+import email from '../assets/icons/envelope-regular.svg'
 
 export default {
   name: "Login",
@@ -157,8 +158,10 @@ input {
   border: none;
   font-weight: bold;
 
+
   &:focus {
     outline: none;
   }
 }
+
 </style>
