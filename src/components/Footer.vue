@@ -32,6 +32,10 @@ export default {
   border-top: 50px #333333;
 }
 .icon{
-  fill: #bb5757;
+  fill: #E2725A;
+  width: 27px;
+  height: 27px;
+  margin-right: 5px;
+
 }
 </style>
