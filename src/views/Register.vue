@@ -37,12 +37,27 @@
               <label style="font-weight: bold; cursor: pointer" for="sex">الجنس</label>
               <div class="row boxShadow p-2">
                 <div class="col">
-                  <input id="sex" name="sex" type="radio" class="radio mt-3">
-                  <span style="margin-right: 8px">ذكر</span>
+                <div class="container">
+                  <label class="container2 col d-inline-flex">
+                    <input id="sex" type="radio" name="radio">
+                    <span class="checkmark"></span>
+                  </label>
                 </div>
+                 <div class="px-5">
+                   <h6>ذكر</h6>
+                 </div>
+                </div>
+
                 <div class="col">
-                  <input id="sex" name="sex" type="radio" class="radio mt-3">
-                  <span style="margin-right: 8px">انثى</span>
+                  <div class="container">
+                    <label class="container2 col d-inline-flex">
+                      <input id="sex" type="radio" name="radio">
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                  <div class="px-5">
+                    <h6>انثى</h6>
+                  </div>
                 </div>
               </div>
             </div>
@@ -163,5 +178,61 @@ input {
     outline: none;
   }
 }
+.container2 {
+  position: relative;
+  cursor: pointer;
+  font-weight: bold;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
+.container2 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: white;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 50%;
+}
+
+.container2:hover input ~ .checkmark {
+  background-color: white;
+  box-shadow: 0px 3px 6px #00000029;
+}
+
+.container2 input:checked ~ .checkmark {
+  background-color: white;
+  box-shadow: 0px 3px 6px #00000029;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container2 input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container2 .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #E2725A;
+}
 </style>
