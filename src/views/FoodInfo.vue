@@ -83,34 +83,40 @@
               <div class="row mt-5">
 
 
-                <div class="row col-12">
-
-                  <h6 class="col"><input  class="radio" type="checkbox">
-                    إضافة جبنة موتزاريلا</h6>
-                  <div class="col"></div>
-                  <h6 class="col secondary">+7 ريال سعودي</h6>
+                <div class="col-12">
+                  <div class="checkbox_wrapper d-inline-flex">
+                    <input type="checkbox" />
+                    <label></label>
+                  </div>
+                  <h6 class="d-inline-flex px-2">اضافة جبنة موتزاريلا</h6>
+                  <div class="w-25 d-inline-flex"></div>
+                  <h6 class=" secondary d-inline-flex">+7 ريال سعودي</h6>
                 </div>
 
                 <div class="mt-3"></div>
 
 
-                <div class="row col-12">
-
-                  <h6 class="col"><input  class="radio" type="checkbox">
-                   إضافة جبنة موتزاريلا</h6>
-                  <div class="col"></div>
-                  <h6 class="col secondary">+7 ريال سعودي</h6>
+                <div class="col-12">
+                  <div class="checkbox_wrapper d-inline-flex">
+                    <input type="checkbox" />
+                    <label></label>
+                  </div>
+                  <h6 class="d-inline-flex px-2">اضافة صوص الباربكيو</h6>
+                  <div class="w-25 d-inline-flex"></div>
+                  <h6 class=" secondary d-inline-flex">+10 ريال سعودي</h6>
                 </div>
 
                 <div class="mt-3"></div>
 
 
-                <div class="row col-12">
-
-                  <h6 class="col"><input  class="radio" type="checkbox">
-                    إضافة جبنة موتزاريلا</h6>
-                  <div class="col"></div>
-                  <h6 class="col secondary">+7 ريال سعودي</h6>
+                <div class="col-12">
+                  <div class="checkbox_wrapper d-inline-flex">
+                    <input type="checkbox" />
+                    <label></label>
+                  </div>
+                  <h6 class="d-inline-flex px-2">اضافة سلطة طحينة</h6>
+                  <div class="w-25 d-inline-flex"></div>
+                  <h6 class=" secondary d-inline-flex">+5 ريال سعودي</h6>
                 </div>
 
 
@@ -125,25 +131,48 @@
 
             <div>
               <div class="row mt-5">
-                <h5 class="col text-end ">هل ترغب في اضافة شيء؟</h5>
+                <h5 class="col text-end ">هل ترغب في ازالة شيء؟</h5>
                 <h5 class="col  text-start"><arrow-down></arrow-down></h5>
               </div>
 
               <div class="lineBlock mt-sm-2">
               </div>
               <div class="row mt-5 row-cols-2">
-                <h6 class="col text-end "><input  class="radio" type="checkbox">
-                  ازالة جبنة موزاريلا</h6>
 
-                <h6 class="col text-end "><input  class="" type="checkbox">
-                  ازالة صوص باربيكيو</h6>
+                <div class="col text-end mt-5">
+                  <div class="checkbox_wrapper d-inline-flex">
+                    <input type="checkbox" />
+                    <label></label>
+                  </div>
+                  <h6 class="d-inline-flex px-2">ازالة جبنة موتزاريلا</h6>
+                </div>
 
 
-                <h6 class="col text-end mt-5"><input  class="" type="checkbox">
-                  ازالة سلطة طحينة</h6>
+                <div class="col text-end mt-5">
+                  <div class="checkbox_wrapper d-inline-flex">
+                    <input type="checkbox" />
+                    <label></label>
+                  </div>
+                  <h6 class="d-inline-flex px-2">ازالة جبنة موتزاريلا</h6>
+                </div>
 
-                <h6 class="col text-end mt-5"><input  class="" type="checkbox">
-                  ازالة سلطة طحينة</h6>
+
+                <div class="col text-end mt-5">
+                  <div class="checkbox_wrapper d-inline-flex">
+                  <input type="checkbox" />
+                  <label></label>
+                </div>
+                  <h6 class="d-inline-flex px-2">ازالة صوص الباربكيو</h6>
+                  </div>
+
+
+                <div class="col text-end mt-5">
+                  <div class="checkbox_wrapper d-inline-flex">
+                    <input type="checkbox" />
+                    <label></label>
+                  </div>
+                  <h6 class="d-inline-flex px-2">ازالة صوص الباربكيو</h6>
+                </div>
 
               </div>
 
@@ -390,4 +419,49 @@ span{
 .card-img{
   max-width: 250px;
 }
+
+.checkbox_wrapper{
+  position: relative;
+  height: 27px;
+  width: 27px;
+}
+
+input[type="checkbox"] {
+  opacity:0;
+  height: 16px;
+  width: 17px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+input[type="checkbox"] + label{
+
+
+  height: 27px;
+  width: 27px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 5px;
+  display:inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+input[type="checkbox"]:checked + label{
+  background-image: url(../assets/checkBox.png);
+  border: none;
+  background-repeat: no-repeat;
+  background-size: auto;
+  fill: black;
+  display:inline-block;
+  padding: 0 0 0 0px;
+}
+h6{
+  font-weight: bold;
+}
+
 </style>
