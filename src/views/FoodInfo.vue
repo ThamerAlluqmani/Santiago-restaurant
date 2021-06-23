@@ -52,10 +52,10 @@
                       <input type="radio" name="radio">
                       <span class="checkmark"></span>
                     </label>
-                    <h6 class="col d-inline-flex">
+                    <h6 class="col-4 d-inline-flex">
                       الحجم الوسط</h6>
-                    <div class="w-50 d-inline-flex"></div>
-                    <h6 class="col secondary">20 ريال سعودي</h6>
+                    <div class="w-25 d-inline-flex"></div>
+                    <h6 class="col secondary col-4">20 ريال سعودي</h6>
                   </div>
 
                   <div class="mt-3"></div>
@@ -67,10 +67,10 @@
                       <input type="radio" name="radio">
                       <span class="checkmark"></span>
                     </label>
-                    <h6 class="col d-inline-flex">
+                    <h6 class="col-4 d-inline-flex">
                       الحجم الكبير</h6>
-                    <div class="w-50 d-inline-flex"></div>
-                    <h6 class="col secondary">35 ريال سعودي</h6>
+                    <div class="w-25 d-inline-flex"></div>
+                    <h6 class="col secondary col-4">35 ريال سعودي</h6>
                   </div>
 
 
@@ -97,9 +97,9 @@
                       <input type="checkbox"/>
                       <label></label>
                     </div>
-                    <h6 class="d-inline-flex px-2">اضافة جبنة موتزاريلا</h6>
-                    <div class="w-25 d-inline-flex"></div>
-                    <h6 class=" secondary d-inline-flex">+7 ريال سعودي</h6>
+                    <h6 class="d-inline-flex px-2 col-4" style="padding-right: 8px">اضافة جبنة موتزاريلا</h6>
+                    <div class="w-25 d-inline-flex col-4"></div>
+                    <h6 class=" secondary d-inline-flex col-4">+7 ريال سعودي</h6>
                   </div>
 
                   <div class="mt-3"></div>
@@ -110,9 +110,9 @@
                       <input type="checkbox"/>
                       <label></label>
                     </div>
-                    <h6 class="d-inline-flex px-2">اضافة صوص الباربكيو</h6>
-                    <div class="w-25 d-inline-flex"></div>
-                    <h6 class=" secondary d-inline-flex">+10 ريال سعودي</h6>
+                    <h6 class="d-inline-flex col-4" style="padding-right: 8px">اضافة صوص الباربكيو</h6>
+                    <div class="w-25 d-inline-flex col-4"></div>
+                    <h6 class=" secondary d-inline-flex col-4">+10 ريال سعودي</h6>
                   </div>
 
                   <div class="mt-3"></div>
@@ -123,9 +123,9 @@
                       <input type="checkbox"/>
                       <label></label>
                     </div>
-                    <h6 class="d-inline-flex px-2">اضافة سلطة طحينة</h6>
-                    <div class="w-25 d-inline-flex"></div>
-                    <h6 class=" secondary d-inline-flex">+5 ريال سعودي</h6>
+                    <h6 class="d-inline-flex px-2 col-4" style="padding-right: 8px">اضافة سلطة طحينة</h6>
+                    <div class="w-25 d-inline-flex col-4"></div>
+                    <h6 class=" secondary d-inline-flex col-4">+5 ريال سعودي</h6>
                   </div>
 
 
@@ -403,6 +403,7 @@ span {
   position: relative;
   height: 27px;
   width: 27px;
+
 }
 
 input[type="checkbox"] {
@@ -413,6 +414,7 @@ input[type="checkbox"] {
   top: 0;
   left: 0;
   z-index: 2;
+  cursor: pointer;
 }
 
 input[type="checkbox"] + label {
@@ -428,6 +430,7 @@ input[type="checkbox"] + label {
   top: 0;
   right: 0;
   z-index: 1;
+
 }
 
 input[type="checkbox"]:checked + label {
@@ -501,6 +504,9 @@ h6 {
   border-radius: 50%;
   background: #E2725A;
 }
-
+textarea{
+  border: none;
+  resize: none;
+}
 
 </style>
