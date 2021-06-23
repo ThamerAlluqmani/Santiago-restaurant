@@ -46,7 +46,7 @@
                 <div class="row mt-5">
 
 
-                  <div class="row col-6">
+                  <div class="row col-12">
 
                     <label class="container2 col d-inline-flex">
                       <input type="radio" name="radio">
@@ -54,14 +54,14 @@
                     </label>
                     <h6 class="col d-inline-flex">
                       الحجم الوسط</h6>
-                    <div class="col"></div>
+                    <div class="w-50 d-inline-flex"></div>
                     <h6 class="col secondary">20 ريال سعودي</h6>
                   </div>
 
                   <div class="mt-3"></div>
 
 
-                  <div class="row col-6">
+                  <div class="row col-12">
 
                     <label class="container2 col d-inline-flex">
                       <input type="radio" name="radio">
@@ -69,7 +69,7 @@
                     </label>
                     <h6 class="col d-inline-flex">
                       الحجم الكبير</h6>
-                    <div class="col"></div>
+                    <div class="w-50 d-inline-flex"></div>
                     <h6 class="col secondary">35 ريال سعودي</h6>
                   </div>
 
