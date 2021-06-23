@@ -52,13 +52,13 @@
                       <input type="radio" name="radio">
                       <span class="checkmark"></span>
                     </label>
-                    <h6 class="col-4 d-inline-flex">
+                    <h6 class="col-4 d-inline-flex pt-2">
                       الحجم الوسط</h6>
                     <div class="w-25 d-inline-flex"></div>
-                    <h6 class="col secondary col-4">20 ريال سعودي</h6>
+                    <h6 class="col secondary col-4 pt-2">20 ريال سعودي</h6>
                   </div>
 
-                  <div class="mt-3"></div>
+                  <div class="mt-4"></div>
 
 
                   <div class="row col-12">
@@ -67,10 +67,10 @@
                       <input type="radio" name="radio">
                       <span class="checkmark"></span>
                     </label>
-                    <h6 class="col-4 d-inline-flex">
+                    <h6 class="col-4 d-inline-flex pt-2">
                       الحجم الكبير</h6>
                     <div class="w-25 d-inline-flex"></div>
-                    <h6 class="col secondary col-4">35 ريال سعودي</h6>
+                    <h6 class="col secondary col-4 pt-2">35 ريال سعودي</h6>
                   </div>
 
 
