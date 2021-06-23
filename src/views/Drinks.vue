@@ -4,7 +4,7 @@
     <h1 class="text-center mt-5">قائمة الطعام</h1>
     <p class="text-center mt-2 ">قائمة الطعام > المشروبات</p>
     <div class="container">
-      <div class="row mt-5">
+      <div class="row mt-5 container">
         <Router :url="'Breakfast'" title="الفطور"></Router>
         <Router :url="'Lunch'" title="وجبات الغذاء"></Router>
         <Router :url="'Dinner'" title="وجبات العشاء"></Router>
