@@ -67,9 +67,15 @@
 
      <transition name="mobile-nav">
        <ul class="mobile-nav" v-show="mobileNav" @click="toggleMobileNav">
-         <router-link class="link" :to="{name: 'Home'}">الرئيسية</router-link>
-         <router-link class="link" :to="{name: 'ViewOrder'}">سلة المشتريات</router-link>
-         <router-link class="link" :to="{name: 'Login'}">تسجيل الدخول/التسجيل</router-link>
+         <router-link class="link" :to="{name: 'Home'}"><home-phone class="icon"></home-phone>
+           الرئيسية</router-link>
+         <router-link class="link" :to="{name: 'ViewOrder'}"><shopping-cart-phone class="icon"></shopping-cart-phone>
+           سلة المشتريات</router-link>
+         <router-link class="link" :to="{name: 'Login'}"><user-icon-phone class="icon"></user-icon-phone>
+           تسجيل الدخول/التسجيل</router-link>
+         <router-link class="link" :to="{name: 'Home'}">
+           <world-phone class="icon"></world-phone>
+           العربية / English</router-link>
        </ul>
      </transition>
    </nav>
@@ -79,17 +85,22 @@
 
 <script>
 import userIcon from '../assets/1/userIcon.svg'
+import userIconPhone from '../assets/icons/user.svg'
 import menuIcon from '../assets/1/menuIcon.svg'
 import shoppingCart from '../assets/1/shoppingCart.svg'
 import world from '../assets/1/world.svg'
 import twitter from '../assets/icons/twitter-brands.svg'
 import instagram from '../assets/icons/instagram-brands.svg'
 import close from '../assets/icons/times-solid.svg'
+import worldPhone from '../assets/icons/globe-solid.svg'
+import shoppingCartPhone from '../assets/icons/shopping-cart-solid.svg'
+import homePhone from '../assets/icons/home-solid.svg'
 
 export default {
   name: "Navigation",
   components: {
-    userIcon, menuIcon, shoppingCart, world , twitter , instagram ,close
+    shoppingCartPhone, homePhone,
+    userIcon, menuIcon, shoppingCart, world , twitter , instagram ,close , worldPhone,userIconPhone
   },
   data(){
     return{
@@ -106,7 +117,7 @@ export default {
   methods:{
     checkScreen(){
       this.windowWidth = window.innerWidth;
-      if (this.windowWidth <= 750){
+      if (this.windowWidth <= 960){
         this.mobile = true;
         return;
       }
@@ -332,6 +343,12 @@ header {
     left: 25px;
     height: 25px;
     width: auto;
+  }
+  .icon{
+    fill: white;
+    height: 25px;
+    width: auto;
+    margin-left: 8px;
   }
 
   .mobile-nav{
