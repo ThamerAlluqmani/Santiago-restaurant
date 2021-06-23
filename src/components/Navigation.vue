@@ -1,64 +1,80 @@
 <template>
-  <div id="nav" class="mt-5">
-    <div v-if="this.$route.name === 'HealthyBreakfast'" class="right row">
+ <header>
+   <nav id="nav" class="mt-5">
+     <div v-if="this.$route.name === 'HealthyBreakfast'" class="right row">
 
 
-    <div class="col"  v-show="!this.mobile">
-      <span class="">تابعنا</span>
-      <twitter class="icon2 mx-2"></twitter>
-      <instagram class="icon2"></instagram>
+       <div class="col"  v-show="!this.mobile">
+         <span class="">تابعنا</span>
+         <twitter class="icon2 mx-2"></twitter>
+         <instagram class="icon2"></instagram>
 
-    </div>
-
-
-    </div>
-
-    <div v-else class="right row"   v-show="!this.mobile">
-      <router-link class="col" :to="{name:'Home'}">
-        <div class="icon col">
-          <menu-icon  class=""></menu-icon>
-        </div>
-      </router-link>
+       </div>
 
 
-        <router-link class="col" :to="{name:'ViewOrder'}">
-          <div class="icon col">
-          <shopping-cart  class=""></shopping-cart>
-          </div>
-        </router-link>
+     </div>
+
+     <div v-else class="right row"   v-show="!this.mobile">
+       <router-link class="col" :to="{name:'Home'}">
+         <div class="icon col">
+           <menu-icon  class=""></menu-icon>
+         </div>
+       </router-link>
 
 
-
-
-      <router-link class="col" :to="{name:'Login'}">
-        <div class="icon col">
-          <user-icon class=""></user-icon>
-        </div>
-      </router-link>
-
-
-    </div>
-
-   <router-link :to="{name:'Home'}">
-     <img src="../assets/logo.png" alt="">
-   </router-link>
-    <div class="left"  v-show="!this.mobile">
-      <div class="btn">
-        <world class=""></world>
-        <select class="p-2">
-          <option class="" value="">
-            العربية
-          </option>
-          <option class="" value="">
-            English
-          </option>
-        </select>
-      </div>
+       <router-link class="col" :to="{name:'ViewOrder'}">
+         <div class="icon col">
+           <shopping-cart  class=""></shopping-cart>
+         </div>
+       </router-link>
 
 
 
-    </div>
-  </div>
+
+       <router-link class="col" :to="{name:'Login'}">
+         <div class="icon col">
+           <user-icon class=""></user-icon>
+         </div>
+       </router-link>
+
+
+     </div>
+
+     <router-link :to="{name:'Home'}">
+       <img src="../assets/logo.png" alt="">
+     </router-link>
+     <div class="left"  v-show="!this.mobile">
+       <div class="btn">
+         <world class=""></world>
+         <select class="p-2">
+           <option class="" value="">
+             العربية
+           </option>
+           <option class="" value="">
+             English
+           </option>
+         </select>
+       </div>
+
+
+
+     </div>
+
+
+
+     <close v-if="this.mobileNav" @click="toggleMobileNav" class="menu-icon" v-show="mobile"/>
+     <menuIcon v-else @click="toggleMobileNav" class="menu-icon" v-show="mobile"/>
+
+     <transition name="mobile-nav">
+       <ul class="mobile-nav" v-show="mobileNav" @click="toggleMobileNav">
+         <router-link class="link" :to="{name: 'Home'}">الرئيسية</router-link>
+         <router-link class="link" :to="{name: 'ViewOrder'}">سلة المشتريات</router-link>
+         <router-link class="link" :to="{name: 'Login'}">تسجيل الدخول/التسجيل</router-link>
+       </ul>
+     </transition>
+   </nav>
+ </header>
+
 </template>
 
 <script>
@@ -68,15 +84,18 @@ import shoppingCart from '../assets/1/shoppingCart.svg'
 import world from '../assets/1/world.svg'
 import twitter from '../assets/icons/twitter-brands.svg'
 import instagram from '../assets/icons/instagram-brands.svg'
+import close from '../assets/icons/times-solid.svg'
 
 export default {
   name: "Navigation",
   components: {
-    userIcon, menuIcon, shoppingCart, world , twitter , instagram
+    userIcon, menuIcon, shoppingCart, world , twitter , instagram ,close
   },
   data(){
     return{
-      mobile:null
+      mobile: null,
+      mobileNav: null,
+      windowWidth: null,
 
     }
   },
@@ -93,7 +112,13 @@ export default {
       }
       this.mobile = false;
       return;
-    }
+    },
+
+    toggleMobileNav(){
+      this.mobileNav = !this.mobileNav;
+      this.profileMenu = false;
+    },
+
   }
 }
 </script>
@@ -148,5 +173,199 @@ select{
 }
 .icon2{
   width: 27px;
+}
+header {
+  background-color: #fff;
+  padding: 0 25px;
+  z-index: 99;
+
+  .link{
+    font-weight: 500;
+    padding: 0 8px;
+    transition: .3s color ease;
+    &:hover{
+      color: #1eb8b8;
+    }
+  }
+
+  nav{
+    //display: flex;
+    // make links right at the end of the page
+    display: block;
+    padding: 25px 0;
+    .branding{
+      display: flex;
+      align-items: center;
+      .header{
+        font-weight: 600;
+        font-size: 24px;
+        color: black;
+        text-decoration: none;
+      }
+    }
+
+
+    .nav-links{
+      position: relative;
+      display: flex;
+      flex:1;
+      align-items: center;
+      justify-content: flex-end;
+
+      ul{
+        margin-right: 32px;
+        .link{
+          margin-right: 32px;
+        }
+        .link:first-child{
+          margin-right: 0;
+        }
+
+      }
+
+      .profile{
+        @media (max-width: 750px) {
+          margin-left: 32px;
+        }
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        margin-right: 16px;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        color: white;
+        background-color: #303030;
+
+        span{
+          pointer-events: none;
+        }
+
+        .profile-menu{
+          position: absolute;
+          top: 60px;
+          left: 0;
+          width: 250px;
+          background-color: #303030;
+          box-shadow: 0 4px 6px -1px rgba(0 , 0 ,0 ,0.1), 0 2px 4px -1px rgba(0, 0 , 0 , 0.06);
+
+
+          .info{
+
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid white;
+
+            .initials{
+              position: initial;
+              margin-left: 5px;
+              width: 40px;
+              height: 40px;
+              background-color: #ffffff;
+              color: #303030;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 50%;
+            }
+
+            .right{
+              flex: 1;
+              margin-left: 24px;
+
+              p:nth-child(1){
+                font-size: 14px;
+              }
+
+              p:nth-child(2),p:nth-child(3){
+                font-size: 12px;
+              }
+
+            }
+
+
+
+          }
+
+          .options{
+            padding: 15px;
+            .option{
+              text-decoration: none;
+              color: white;
+              display: flex;
+              align-items: center;
+              margin-bottom: 12px;
+
+              .icon{
+                width: 18px;
+                height: auto;
+              }
+              p{
+                font-size: 14px;
+                margin-right: 12px;
+
+              }
+
+              &:last-child{
+                margin-bottom: 0;
+              }
+
+            }
+          }
+
+        }
+
+
+      }
+
+
+    }
+  }
+
+  .menu-icon{
+    cursor: pointer;
+    position: absolute;
+    top: 32px;
+    left: 25px;
+    height: 25px;
+    width: auto;
+  }
+
+  .mobile-nav{
+    padding: 20px;
+    width: 70%;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100%;
+    background-color: #303030;
+    top: 0;
+    right: 0;
+
+    .link{
+      padding: 15px 0 ;
+      color: #fff;
+    }
+  }
+
+  .mobile-nav-enter-active,
+  .mobile-nav-leave-active{
+    transition: all 1s ease;
+  }
+  .mobile-nav-enter{
+    transform: translate(250px);
+  }
+  .mobile-nav-enter-to{
+    transform: translate(0);
+  }
+  .mobile-nav-leave-to{
+    transform: translate(250px);
+
+  }
+
 }
 </style>
