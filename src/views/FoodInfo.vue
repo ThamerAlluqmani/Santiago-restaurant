@@ -567,8 +567,7 @@ h5{
   padding-top: 68px;
   cursor: pointer;
   &:hover{
-    opacity: 50%;
-    fill: black;
+    fill: rgba(64, 64, 64, 0.73);
   }
   @media (max-width: 1080px) {
     width: 48px;
