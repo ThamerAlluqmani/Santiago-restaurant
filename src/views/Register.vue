@@ -2,8 +2,8 @@
   <div class="mb-5 mt-5">
     <div class="container mt-5 mb-5">
 
-      <div class="boxShadow cardCenter" style="max-width: 720px">
-        <h3 class="text-center mt-5">التسجيل لأول مره
+      <div class="box cardCenter" style="max-width: 720px">
+        <h3 class="text-center mt-5 p-5">التسجيل لأول مره
           <div class="line text-center"></div>
         </h3>
         <div class="card-body ">
@@ -12,14 +12,14 @@
               <label style="font-weight: bold; cursor: pointer" for="first">الاسم الاول</label>
               <div class="boxShadow">
                 <user class="icon"></user>
-                <input id="first" name="first" type="text"  class="">
+                <input id="first" name="first" type="text"  class="customInput">
               </div>
             </div>
             <div class="col">
               <label style="font-weight: bold; cursor: pointer" for="second">الاسم الثاني</label>
               <div class="boxShadow">
                 <users class="icon"></users>
-                <input id="second" name="second" type="text"  class="">
+                <input id="second" name="second" type="text"  class="customInput">
               </div>
             </div>
           </div>
@@ -27,7 +27,7 @@
             <label style="font-weight: bold; cursor: pointer" for="email">البريد الإلكتروني</label>
             <div class="boxShadow">
               <email class="icon"></email>
-              <input id="email" name="email" type="email"  class="">
+              <input id="email" name="email" type="email"  class="customInput">
             </div>
           </div>
 
@@ -64,7 +64,7 @@
             <div class="col">
               <label style="font-weight: bold; cursor: pointer" for="phone">رقم الجوال</label>
               <div class="input-group mb-3 boxShadow">
-                <input name="phone" id="phone" type="tel" class="form-control" aria-label="Text input with dropdown button">
+                <input name="phone" id="phone" type="tel" class="customInput" aria-label="Text input with dropdown button">
                 <button class=" btn bg-white dropdown-toggle btn-lg" type="button" data-bs-toggle="dropdown" aria-expanded="false">+966</button>
                 <ul class="dropdown-menu dropdown-menu-end">
                   <li><a class="dropdown-item" href="#">Action</a></li>
@@ -82,14 +82,16 @@
             <label style="font-weight: bold; cursor: pointer" for="check">رمز التحقق</label>
             <div class="boxShadow">
 
-              <input id="check" name="check" type="text"  class="">
+              <input id="check" name="check" type="text"  class="customInput">
             </div>
           </div>
           <h5 v-show="displayItem" class="text-center mt-5">اعادة الإرسال بعد 00:23</h5>
-          <button @click="displayHidden()" class="btn btn-lg  text-white mt-5">{{ button }}</button>
-          <router-link :to="{name:'Login'}" class="secondary text-decoration-none"
-                       style="font-size: 16px; font-weight: bold">مسجل مسبقاً ؟
-          </router-link>
+          <button @click="displayHidden()" class="register-button  mt-5 ">{{ button }}</button>
+          <div class="login-link">
+            <router-link :to="{name:'Login'}" class="secondary text-decoration-none"
+                         style="font-size: 16px; font-weight: bold">مسجل مسبقاً ؟
+            </router-link>
+          </div>
         </div>
       </div>
     </div>
@@ -124,10 +126,10 @@ export default {
 
 <style lang="scss" scoped>
 
-.boxShadow {
+.box {
+  background: #F9F9F9 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 6px #00000029;
-  border-radius: 10px;
-  margin: 32px 0px;
+  border-radius: 25px;
 
 }
 
@@ -149,11 +151,19 @@ label {
   font-size: 16px;
 }
 
-button {
+.register-button{
   display: block;
   margin-right: auto;
   margin-left: auto;
-  background-color: #333333;
+  width: 183px;
+  height: 86px;
+  @media(max-width: 600px){
+    width: 115px;
+    height: 62px;
+  }
+  color: #FFFFFF;
+  background: #333333 0% 0% no-repeat padding-box;
+  border-radius: 15px;
 }
 
 .secondary {
@@ -167,6 +177,7 @@ button {
 .icon {
   width: 32px;
   padding: 5px;
+  display: inline;
 }
 
 input {
@@ -235,4 +246,28 @@ input {
   border-radius: 50%;
   background: #E2725A;
 }
+
+.login-link{
+  font-size: 16px;
+  font-weight: bold;
+  @media(max-width: 600px){
+    margin: 36px;
+  }
+}
+.boxShadow{
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 10px;
+  margin: 8px 0;
+}
+.customInput{
+  display: inline;
+  height: 68px;
+  @media(max-width: 600px){
+    height: 48px;
+    width: 48px;
+  }
+
+}
+
 </style>
