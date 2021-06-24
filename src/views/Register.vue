@@ -64,7 +64,7 @@
             <div class="col">
               <label style="font-weight: bold; cursor: pointer" for="phone">رقم الجوال</label>
               <div class="input-group mb-3 boxShadow">
-                <input name="phone" id="phone" type="tel" class="customInput" aria-label="Text input with dropdown button">
+                <input name="phone" id="phone" dir="ltr" type="tel" class="customInput" aria-label="Text input with dropdown button">
                 <button class=" btn bg-white dropdown-toggle btn-lg" type="button" data-bs-toggle="dropdown" aria-expanded="false">+966</button>
                 <ul class="dropdown-menu dropdown-menu-end">
                   <li><a class="dropdown-item" href="#">Action</a></li>

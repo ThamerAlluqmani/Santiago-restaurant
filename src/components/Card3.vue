@@ -1,6 +1,6 @@
 <template>
 <div>
-  <div id="card" class="card mb-3 p-5" style="max-width: 840px;">
+  <div id="card" class="boxShadow mb-3 p-5" style="max-width: 840px;">
     <div class="row g-0">
       <div class="col-md-4">
         <img src="../assets/5/dinner-2.png" alt="...">
@@ -30,15 +30,17 @@
 
 
       <div class="row">
-        <div class="col-lg-7"></div>
-        <button class="customBtn col-lg-2">
+        <div class="col-lg-6 col-md-4 col-sm-auto"></div>
+        <button class="customBtn m-2 d-inline-flex justify-content-center align-content-center align-items-center">
           <Delete class="icon"></Delete>
-          <span @click="number=0">حذف</span>
+          <span style="font-size: 20px;margin-right: 8px" @click="number=0">حذف</span>
         </button>
-        <div class="customBtn col-lg-2 text-center p-2">
-          <span @click="number--">-</span>
-          <span class="px-2">{{number}}</span>
-          <span @click="number++" class="">+</span>
+
+
+        <div class="customBtn m-2 d-inline-flex justify-content-center align-content-center align-items-center">
+          <span style="font-size: 24px;margin-left: 8px" @click="number--">-</span>
+          <span style="font-size: 24px"  class="px-2">{{number}}</span>
+          <span style="font-size: 24px;margin-right: 8px" @click="number++" class="">+</span>
         </div>
       </div>
 
@@ -77,17 +79,14 @@ name: "Card3",
   padding-bottom: 16px;
 }
 .customBtn{
-  border: 1px solid;
+  border: 1px solid #333333;
   border-radius: 10px;
-  background-color: white;
-  margin: 32px 12px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
   font-weight: bold;
   font-size: 18px;
-  height: 48px;
-
-
-
-
+  width: 194px;
+  height: 82px;
+  flex: 1;
 }
 span{
   cursor: pointer;
