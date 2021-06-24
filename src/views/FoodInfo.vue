@@ -313,6 +313,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .router {
   color: #E2725A;
 }
@@ -346,6 +347,7 @@ img {
 }
 
 .boxShadow {
+  background: #FBFBFB 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 6px #00000029;
   border-radius: 10px;
   margin: 32px 0px;
@@ -383,6 +385,9 @@ img {
   border: 1px solid;
   border-radius: 10px;
   margin: 32px 0px;
+  width: 337px;
+  height: 98px;
+  font-size: 28px;
 }
 
 .ml {
@@ -516,10 +521,12 @@ h6 {
 }
 textarea{
   border: none;
-  resize: none;
+  background: #F9F9F9 0% 0% no-repeat padding-box;
+  border-radius: 15px;
 }
 .comment{
   padding: 0 24px 24px 24px;
+
 }
 h5{
   font-weight: bold;
