@@ -251,15 +251,23 @@
       <div class="mt-5">
         <h3 style="font-weight: bold">الأفضل مبيعاً</h3>
         <div class="row mt-5 ">
-
-          <div class="col-lg-4 col-md-6 col-sm-12 p-5">
+          <div v-if="!this.mobile" class="col col-lg-1 pt-5 p-5">
+            <Rarow class="icon3" />
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 p-5">
             <img src="1/breakfast-4.png" alt="" class="card-img">
           </div>
-          <div class="col-lg-4 col-md-6 col-sm-12 p-5">
+          <div class="col-lg-3 col-md-6 col-sm-12 p-5">
             <img src="1/breakfast-2.png" alt="" class="card-img">
           </div>
-          <div class="col-lg-4 col-md-6 col-sm-12 p-5">
+          <div class="col-lg-3 col-md-6 col-sm-12 p-5">
             <img src="1/breakfast-3.png" alt="" class="card-img">
+          </div>
+          <div v-if="this.mobile" class="col-lg-3 col-md-6 col-sm-12 p-5">
+            <img src="1/breakfast-3.png" alt="" class="card-img">
+          </div>
+          <div v-show="!mobile" class="col col-lg-1 pt-5 p-5">
+            <Larow class="icon3"/>
           </div>
 
 
@@ -282,20 +290,29 @@ import Comment from "../components/Comment";
 import bascket from '../assets/5/Icon material-add-shopping-cart.svg'
 import Model from "../components/Model";
 import star from '../assets/icons/star-solid.svg'
+import Larow from '../assets/icons/angle-left-solid.svg'
+import Rarow from '../assets/icons/angle-right-solid.svg'
 
 export default {
   name: "FoodInfo",
   data() {
     return {
+      mobile: null,
+      mobileNav: null,
+      windowWidth: null,
       modelActive: false,
       modelMessage: "test",
       number: 1
     }
   },
+  created() {
+    window.addEventListener('resize', this.checkScreen);
+    this.checkScreen();
+  },
   components: {
     Model,
     Comment,
-    arrowDown, bascket, star
+    arrowDown, bascket, star , Rarow , Larow
   },
   methods: {
     closeModel() {
@@ -307,8 +324,20 @@ export default {
       this.modelActive = true;
       window.scrollTo(0, 0);
 
-    }
-  }
+    },
+
+
+    checkScreen(){
+      this.windowWidth = window.innerWidth;
+      if (this.windowWidth <= 1080){
+        this.mobile = true;
+        return;
+      }
+      this.mobile = false;
+      return;
+    },
+  },
+
 }
 </script>
 
@@ -530,5 +559,21 @@ textarea{
 }
 h5{
   font-weight: bold;
+}
+.icon3{
+  fill: #C2C2C2;
+  width: 72px;
+  height: 128px;
+  padding-top: 68px;
+  cursor: pointer;
+  &:hover{
+    opacity: 50%;
+    fill: black;
+  }
+  @media (max-width: 1080px) {
+    width: 48px;
+    height: 108px;
+    padding-top: 58px;
+  }
 }
 </style>
