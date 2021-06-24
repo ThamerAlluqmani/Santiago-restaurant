@@ -5,7 +5,7 @@
       <div class="col-md-4">
         <img src="../assets/5/dinner-2.png" alt="...">
       </div>
-      <div class="col-md-12 col-lg-8 boxShadow ">
+      <div class="col-md-12 col-lg-8 ">
         <div class="card-body mb-3">
           <div class="row justify-content-between">
             <h5 class="card-title text-end col bold">بان تشيلى مع بطاطس
@@ -19,9 +19,9 @@
 
           <div class="mt-5">
             <h5 class="third">ملاحظات</h5>
-           <div class="row mt-3">
-             <textarea class="card-text text-muted  col-6 text-end border-white">ازالة الصوص الحار</textarea>
-             <p class="card-text text-muted col-6 text-start"><Edit class="icon"></Edit>تعديل</p>
+           <div class="row mt-3 edit">
+               <span class="card-text text-muted col  text-end  ">ازالة الصوص الحار</span>
+               <span class="card-text text-muted col text-start"><Edit class="icon"></Edit>تعديل</span>
            </div>
           </div>
         </div>
@@ -45,29 +45,6 @@
 
 
 
-
-
-<!--      <div class="row">-->
-<!--        <div class="col-lg-7 col-md-6  col-sm-12"></div>-->
-<!--        <div class="col-lg-3 col-md-5 col-sm-auto">-->
-<!--          <div class="row">-->
-<!--           <div class="col">-->
-<!--             <button :class="number === 0 ? 'disabled' : ''" class="customBtn btn ">-->
-<!--               <Delete class="icon d-inline"></Delete>-->
-<!--               <span class="col">حذف</span>-->
-<!--             </button>-->
-
-<!--           </div>-->
-<!--            <div class="col">-->
-<!--              <div :class="number === 0 ? 'disabled' : ''" class="customBtn btn btn-lg">-->
-<!--                <span @click="number&#45;&#45;" class="col-lg-4 col-md-4 col-sm-4">-</span>-->
-<!--                <span  class="col-lg-4 col-md-4 col-sm-4">{{number}}</span>-->
-<!--                <span @click="number++" class="col-lg-4 col-md-4 col-sm-4">+</span>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
 
     </div>
   </div>
@@ -119,5 +96,12 @@ span{
   width: 26px;
 }
 
-
+.edit{
+  background: #F9F9F9 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  width: 100%;
+  border-radius: 10px;
+  resize: none;
+  height: 102px;
+}
 </style>

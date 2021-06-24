@@ -98,8 +98,8 @@
                       <label></label>
                     </div>
                     <h6 class="d-inline-flex px-2 col-4" style="padding-right: 8px">اضافة جبنة موتزاريلا</h6>
-                    <div class="w-25 d-inline-flex col-4"></div>
-                    <h6 class=" secondary d-inline-flex col-4">+7 ريال سعودي</h6>
+                    <div class="w-25 d-inline-flex col-2"></div>
+                    <h6 class=" secondary d-inline-flex col-3">+7 ريال سعودي</h6>
                   </div>
 
                   <div class="mt-3"></div>
@@ -111,8 +111,8 @@
                       <label></label>
                     </div>
                     <h6 class="d-inline-flex col-4" style="padding-right: 8px">اضافة صوص الباربكيو</h6>
-                    <div class="w-25 d-inline-flex col-4"></div>
-                    <h6 class=" secondary d-inline-flex col-4">+10 ريال سعودي</h6>
+                    <div class="w-25 d-inline-flex col-2"></div>
+                    <h6 class=" secondary d-inline-flex col-3">+10 ريال سعودي</h6>
                   </div>
 
                   <div class="mt-3"></div>
@@ -123,9 +123,9 @@
                       <input type="checkbox"/>
                       <label></label>
                     </div>
-                    <h6 class="d-inline-flex px-2 col-4" style="padding-right: 8px">اضافة سلطة طحينة</h6>
-                    <div class="w-25 d-inline-flex col-4"></div>
-                    <h6 class=" secondary d-inline-flex col-4">+5 ريال سعودي</h6>
+                    <h6 class="d-inline-flex col-4" style="padding-right: 8px">اضافة سلطة طحينة</h6>
+                    <div class="w-25 d-inline-flex col-2"></div>
+                    <h6 class=" secondary d-inline-flex col-3">+5 ريال سعودي</h6>
                   </div>
 
 
@@ -187,7 +187,7 @@
 
               <div>
                 <div class="row mt-5 form-group">
-                  <h5 class="col text-end " style="font-weight: bold">ملاحظات</h5>
+                  <h3 class="col text-end " style="font-weight: bold">ملاحظات</h3>
                   <textarea class="form-control" name="" id="" cols="20" rows="5" placeholder="اضف ملاحظة"></textarea>
 
                 </div>
@@ -215,26 +215,32 @@
         </div>
 
 
-        <div id="left" class="col-sm-12 col-lg-6 col-md-6 boxShadow">
-          <div>
+        <div id="left" class="col-sm-12 col-lg-6 col-md-6">
+          <div class="boxShadow p-3">
             <div class="row mt-5">
-              <h5 class="col text-end ">التقييمات</h5>
-              <h5 class="col  text-start" style="font-weight: bold">4.5</h5>
+              <h3 class="col text-end" >التقييمات</h3>
+              <h3 class="col text-start" style="font-weight: bold">4.5</h3>
             </div>
-            <div class="text-start">
-              <star class="star"></star>
-              <star class="star "></star>
-              <star class="star "></star>
-              <star class="star "></star>
+            <div class="row">
+              <div class="text-end"></div>
+              <div class="text-start">
+                <star class="star"></star>
+                <star class="star "></star>
+                <star class="star "></star>
+                <star class="star "></star>
+              </div>
             </div>
 
-            <div class="lineBlock mt-sm-2 mb-5">
+            <div class="lineBlock">
             </div>
-            <Comment></Comment>
-            <Comment></Comment>
-            <Comment></Comment>
+           <div class="comment">
+             <Comment></Comment>
+             <Comment></Comment>
+             <Comment></Comment>
+             <button class="customBtn secondary mt-5 mb-5">اضف تقييمك</button>
 
-            <button class="btn-lg btn customBtn secondary mt-5 mb-5">اضف تقييمك</button>
+           </div>
+
 
           </div>
 
@@ -243,7 +249,7 @@
 
 
       <div class="mt-5">
-        <h3>الأفضل مبيعاً</h3>
+        <h3 style="font-weight: bold">الأفضل مبيعاً</h3>
         <div class="row mt-5 ">
 
           <div class="col-lg-4 col-md-6 col-sm-12 p-5">
@@ -353,20 +359,24 @@ img {
 }
 
 .lineBlock {
+  color: #00000029;
   width: 100%;
   padding-bottom: 16px;
   border-bottom: 2px solid;
 }
 
 .customBtn {
+  width: 236px;
+  height: 82px;
+  border: none;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 6px #00000029;
+  border-radius: 15px;
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 0 auto;
-  width: 236px;
   font-weight: bold;
-
-
 }
 
 .customBtn2 {
@@ -508,5 +518,10 @@ textarea{
   border: none;
   resize: none;
 }
-
+.comment{
+  padding: 0 24px 24px 24px;
+}
+h5{
+  font-weight: bold;
+}
 </style>
