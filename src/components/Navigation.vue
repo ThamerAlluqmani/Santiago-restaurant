@@ -5,9 +5,9 @@
 
 
        <div class="col"  v-show="!this.mobile">
-         <span class="">تابعنا</span>
+         <span class="px-2">تابعنا : </span>
          <twitter class="icon2 mx-2"></twitter>
-         <instagram class="icon2"></instagram>
+         <instagram class="icon2 mx-2"></instagram>
 
        </div>
 
@@ -183,7 +183,10 @@ select{
   border: none;
 }
 .icon2{
-  width: 27px;
+  width: 38px;
+  border-radius: 50%;
+  padding: 8px;
+  box-shadow: 0px 0px 3px #00000029;
 }
 header {
   background-color: #fff;
