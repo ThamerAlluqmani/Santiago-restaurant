@@ -1,21 +1,23 @@
 <template>
-  <div id="card" class="boxShadow col-sm-12 col-lg-4 col-md-6">
+  <div id="card" class="col-sm-12 col-lg-4 col-md-6">
     <router-link :to="url" class="link">
       <div class="image" :style="{backgroundImage: `url(${img})`}"></div>
-      <div class="card-body">
-        <div class="row">
-          <h5 class="col text-end">{{ title }}
-            <div class="line"></div>
-          </h5>
-          <h5 class="col secondary text-start">{{ price }}</h5>
-        </div>
-        <div>
-          <p>{{ body }}</p>
-        </div>
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <h5 class="col text-end">{{ title }}
+              <div class="line"></div>
+            </h5>
+            <h5 class="col secondary text-start">{{ price }}</h5>
+          </div>
+          <div>
+            <p>{{ body }}</p>
+          </div>
 
-        <div class="row">
-          <h5 class="col text-end">السعرات الحرارية</h5>
-          <h5 class="col secondary text-start">{{ cals }}</h5>
+          <div class="row">
+            <h5 class="col text-end">السعرات الحرارية</h5>
+            <h5 class="col secondary text-start">{{ cals }}</h5>
+          </div>
         </div>
       </div>
     </router-link>
@@ -30,6 +32,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .secondary {
   color: #85311B;
 
@@ -47,6 +50,7 @@ export default {
 
 .image {
   height: 323px;
+  border-radius: 15px 15px 0px  0px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -62,5 +66,10 @@ export default {
 .link{
   text-decoration: none;
   color: black;
+}
+.card{
+  border-radius: 0 0px 15px 15px;
+  box-shadow: 0px 3px 6px #00000029;
+  margin-bottom: 32px;
 }
 </style>
