@@ -94,7 +94,6 @@ button{
     width: 115px;
     height: 62px;
   }
-  color: #FFFFFF;
   background: #333333 0% 0% no-repeat padding-box;
   border-radius: 15px;
 }
