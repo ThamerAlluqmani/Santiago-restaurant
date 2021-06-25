@@ -136,7 +136,7 @@ button {
   height: 30px;
   width: 30px;
   position: absolute;
-  background: #000;
+  background: #333333;
   border-radius: 50%;
   top: 10px;
   color: #fff;
