@@ -83,46 +83,43 @@ export default {
   height: 30px;
   width: 30px;
   position: absolute;
-  background: #000;
+  background: #333333;
   border-radius: 50%;
   top: 10px;
   color: #fff;
   line-height: 30px;
   z-index: 9999;
 
-  &.one {
-    left: 65px;
-    background: #bbb;
-    color: #bbb;
-  }
 
   &.two {
     left: 280px;
-    background: #bbb;
-    color: #bbb;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    opacity: 1;
   }
 
   &.three {
     left: 490px;
-    background: #333333;
-    color: #333333;
+    background: #333333 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    opacity: 1;
 
   }
 
   &.four {
     left: 700px;
-    background: #bbb;
-    color: #bbb;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    opacity: 1;
   }
 }
 
 .progress-bar {
   position: absolute;
-  height: 10px;
   width: 25%;
-  top: 20px;
+  top: 25px;
   left: 10%;
-  background: #bbb;
+  border: 1px solid #707070;
 
   &.first {
     background: #bbb;

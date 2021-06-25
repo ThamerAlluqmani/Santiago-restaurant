@@ -145,36 +145,39 @@ button {
 
   &.one {
     left: 65px;
-    background: #bbb;
-    color: #bbb;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    opacity: 1;
   }
 
   &.two {
     left: 280px;
-    background: #bbb;
-    color: #bbb;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    opacity: 1;
   }
 
   &.three {
     left: 490px;
-    background: #bbb;
-    color: #bbb;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    opacity: 1;
   }
 
   &.four {
     left: 700px;
-    background: #333333;
-    color: #333333;
+    background: #333333 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    opacity: 1;
   }
 }
 
 .progress-bar {
   position: absolute;
-  height: 10px;
   width: 25%;
-  top: 20px;
+  top: 25px;
   left: 10%;
-  background: #bbb;
+  border: 1px solid #707070;
 
   &.first {
     background: #bbb;
