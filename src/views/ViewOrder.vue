@@ -31,8 +31,8 @@
     <Card3></Card3>
 
     <div>
-      <button @click="$router.push({name:'Checkout'})" class="text-white text-center btn d-inline  m-5" style="color: black;font-weight: bold; font-size: 24px">التالي</button>
-      <router-link :to="{name:'Home'}" class="text-decoration-none d-inline m-5 " style="color: black;font-weight: bold; font-size: 24px">العودة للقائمة</router-link>
+      <button @click="$router.push({name:'Checkout'})" class="text-white text-center btn d-inline  m-5" style="font-weight: bold; font-size: 24px">التالي</button>
+      <router-link :to="{name:'Home'}" class="text-decoration-none d-inline m-lg-5 back" style="color: black;font-weight: bold; font-size: 24px">العودة للقائمة</router-link>
     </div>
 
 
@@ -88,6 +88,11 @@ export default {
   margin: auto auto;
 
 
+}
+.back{
+  @media(max-width: 600px) {
+    margin-right: 96px;
+  }
 }
 
 .line {
@@ -265,5 +270,7 @@ img{
 .btn{
   border-radius: 10px;
   padding: 8px 64px;
+  width: 247px;
+  height: 89px;
 }
 </style>

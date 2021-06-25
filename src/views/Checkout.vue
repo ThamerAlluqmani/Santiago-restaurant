@@ -29,9 +29,9 @@
       <table>
         <tr class="row">
           <th class="row col-3 p-5">
-            <span class="col-1 ">-</span>
-            <span class="col-1 ">1</span>
-            <span class="col-1 ">+</span>
+            <span @click="number1--" class="col-1">-</span>
+            <span class="col-1 ">{{number1}}</span>
+            <span @click="number1++" class="col-1 ">+</span>
           </th>
           <th class="col-9 row right">
             <div class="col-6 p-4">بان تشيلى مع بطاطس</div>
@@ -42,9 +42,9 @@
         <tr class="line"></tr>
         <tr class="row">
           <th class="row col-3 p-5">
-            <span class="col-1 ">-</span>
-            <span class="col-1 ">1</span>
-            <span class="col-1 ">+</span>
+             <span @click="number2--" class="col-1">-</span>
+            <span class="col-1 ">{{number2}}</span>
+            <span @click="number2++" class="col-1 ">+</span>
           </th>
           <th class="col-9 row right">
             <div class="col-6 p-4">بان تشيلى مع بطاطس</div>
@@ -55,9 +55,9 @@
         <tr class="line"></tr>
         <tr class="row">
           <th class="row col-3 p-5">
-            <span class="col-1 ">-</span>
-            <span class="col-1 ">1</span>
-            <span class="col-1 ">+</span>
+             <span @click="number3--" class="col-1">-</span>
+            <span class="col-1 ">{{number3}}</span>
+            <span @click="number3++" class="col-1 ">+</span>
           </th>
           <th class="col-9 row right">
             <div class="col-6 p-4">بان تشيلى مع بطاطس</div>
@@ -96,7 +96,7 @@
           <th class="row col-3 p-4">
             <div>الخصم</div>
           </th>
-          <th class="col-9 row ">
+          <th class="col-9 row right">
             <div class="col-6 p-4"></div>
             <div class="col-6 text-black-50 p-4">10 ريال سعودي</div>
 
@@ -107,7 +107,7 @@
           <th class="row col-6 p-4">
             <div>ضريبة القيمة المضافة</div>
           </th>
-          <th class="col-6 row">
+          <th class="col-6 row right">
             <div class="col-3 p-4"></div>
             <div class="col-9 text-black-50 p-4">70 ريال سعودي</div>
 
@@ -118,7 +118,7 @@
           <th class="row col-3 p-4">
             <div>الإجمالي</div>
           </th>
-          <th class="col-9 row ">
+          <th class="col-9 row right">
             <div class="col-6 p-4"></div>
             <div class="col-6 text-black-50 p-4">200 ريال سعودي</div>
 
@@ -129,6 +129,10 @@
       </table>
     </div>
 
+    <div>
+      <button @click="$router.push({name:'Home'})" class="text-white text-center btn d-inline  m-5" style="color: black;font-weight: bold; font-size: 24px">تنفيذ الطلب</button>
+      <router-link :to="{name:'ViewOrder'}" class="text-decoration-none d-inline m-lg-5 " style="color: black;font-weight: bold; font-size: 24px">تعديل الطلب</router-link>
+    </div>
 
   </div>
 </template>
@@ -138,7 +142,10 @@ export default {
   name: "Checkout",
   data() {
     return {
-      mobile: null
+      mobile: null,
+      number1:1,
+      number2:1,
+      number3:1,
 
     }
   },
@@ -165,7 +172,27 @@ export default {
   font-weight: bold;
 
 }
-
+span{
+  cursor: pointer;
+  &:hover{
+    opacity: 0.5;
+  }
+}
+.btn{
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #333333;
+  border-radius: 10px;
+  padding: 8px 48px;
+  width: 247px;
+  height: 89px;
+}
+.back{
+  @media(max-width: 600px) {
+    margin-right: 96px;
+  }
+}
 .customInput {
   background: #F9F9F9 0% 0% no-repeat padding-box;
   border-radius: 10px;
@@ -173,6 +200,9 @@ export default {
   outline: none;
   width: 243px;
   height: 89px;
+  font-weight: lighter;
+  font-size: 16px;
+
 }
 .customBtn{
   border: 1px solid #333333;
