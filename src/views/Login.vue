@@ -88,13 +88,15 @@ button{
   display: block;
   margin-right: auto;
   margin-left: auto;
-  background-color: #333333;
   width: 183px;
   height: 86px;
   @media(max-width: 600px){
     width: 115px;
     height: 62px;
   }
+  color: #FFFFFF;
+  background: #333333 0% 0% no-repeat padding-box;
+  border-radius: 15px;
 }
 .secondary{
   color: #85311B;

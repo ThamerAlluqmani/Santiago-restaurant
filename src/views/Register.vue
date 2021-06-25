@@ -86,7 +86,7 @@
             </div>
           </div>
           <h5 v-show="displayItem" class="text-center mt-5">اعادة الإرسال بعد 00:23</h5>
-          <button @click="displayHidden()" class="register-button  mt-5 ">{{ button }}</button>
+          <button @click="displayHidden()" class="register-button   mt-5 ">{{ button }}</button>
           <div class="login-link">
             <router-link :to="{name:'Login'}" class="secondary text-decoration-none"
                          style="font-size: 16px; font-weight: bold">مسجل مسبقاً ؟
@@ -244,7 +244,7 @@ input {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #E2725A;
+  background:#333333;
 }
 
 .login-link{
