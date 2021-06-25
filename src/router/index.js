@@ -13,6 +13,7 @@ import FoodInfo from "../views/FoodInfo";
 import ViewOrder from "../views/ViewOrder";
 import Login from "../views/Login";
 import Register from "../views/Register";
+import Checkout from "../views/Checkout";
 
 Vue.use(VueRouter);
 
@@ -83,6 +84,11 @@ const routes = [
     path: "/Register",
     name: "Register",
     component: Register,
+  },
+  {
+    path: "/Checkout",
+    name: "Checkout",
+    component: Checkout,
   },
 ];
 

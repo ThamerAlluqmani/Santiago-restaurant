@@ -31,7 +31,7 @@
     <Card3></Card3>
 
     <div>
-      <button class="text-white text-center btn d-inline  m-5" style="color: black;font-weight: bold; font-size: 24px">التالي</button>
+      <button @click="$router.push({name:'Checkout'})" class="text-white text-center btn d-inline  m-5" style="color: black;font-weight: bold; font-size: 24px">التالي</button>
       <router-link :to="{name:'Home'}" class="text-decoration-none d-inline m-5 " style="color: black;font-weight: bold; font-size: 24px">العودة للقائمة</router-link>
     </div>
 

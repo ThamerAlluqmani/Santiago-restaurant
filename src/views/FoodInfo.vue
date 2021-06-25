@@ -195,7 +195,7 @@
 
               <div>
                 <div class="row mt-5 ">
-                  <button @click="runModel()" style="font-weight: bold" class="col btn btn-lg customBtn2 ml">
+                  <button @click="$router.push({name:'Home'})"  style="font-weight: bold" class="col btn btn-lg customBtn2 ml">
                     <bascket></bascket>
                     اضافة
                   </button>
@@ -237,7 +237,7 @@
              <Comment></Comment>
              <Comment></Comment>
              <Comment></Comment>
-             <button class="customBtn secondary mt-5 mb-5">اضف تقييمك</button>
+             <button @click="runModel()" class="customBtn secondary mt-5 mb-5">اضف تقييمك</button>
 
            </div>
 
