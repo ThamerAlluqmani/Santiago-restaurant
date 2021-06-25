@@ -1,20 +1,21 @@
 <template>
-<div class="container mt-5 center">
-  <div v-show="!this.mobile" class="wrapper">
-    <div class="margin-area">
-      <div class="dot two"></div>
-      <div class="dot three"></div>
-      <div class="dot four"></div>
-      <div class="progress-bar second"></div>
-      <div class="progress-bar third"></div>
-      <div class="message message-1">
+  <div class="container mt-5 center">
+    <div v-show="!this.mobile" class="wrapper">
+      <div class="margin-area">
+        <div class="dot two"></div>
+        <div class="dot three"></div>
+        <div class="dot four"></div>
+        <div class="progress-bar second"></div>
+        <div class="progress-bar third"></div>
+        <div class="message message-1">
 
-        <div>
-          <div class="message message-2">التنفيذ
-            <div>
-              <div class="message message-3">الفاتورة
-                <div>
-                  <div class="message message-4">طلباتك
+          <div>
+            <div class="message message-2">التنفيذ
+              <div>
+                <div class="message message-3">الفاتورة
+                  <div>
+                    <div class="message message-4">طلباتك
+                    </div>
                   </div>
                 </div>
               </div>
@@ -23,20 +24,121 @@
         </div>
       </div>
     </div>
+
+    <div class="check-out mb-5">
+      <table>
+        <tr class="row">
+          <th class="row col-3 p-5">
+            <span class="col-1 ">-</span>
+            <span class="col-1 ">1</span>
+            <span class="col-1 ">+</span>
+          </th>
+          <th class="col-9 row right">
+            <div class="col-6 p-4">بان تشيلى مع بطاطس</div>
+            <div class="col-6 secondary p-4">20 ريال سعودي</div>
+
+          </th>
+        </tr>
+        <tr class="line"></tr>
+        <tr class="row">
+          <th class="row col-3 p-5">
+            <span class="col-1 ">-</span>
+            <span class="col-1 ">1</span>
+            <span class="col-1 ">+</span>
+          </th>
+          <th class="col-9 row right">
+            <div class="col-6 p-4">بان تشيلى مع بطاطس</div>
+            <div class="col-6 secondary p-4">20 ريال سعودي</div>
+
+          </th>
+        </tr>
+        <tr class="line"></tr>
+        <tr class="row">
+          <th class="row col-3 p-5">
+            <span class="col-1 ">-</span>
+            <span class="col-1 ">1</span>
+            <span class="col-1 ">+</span>
+          </th>
+          <th class="col-9 row right">
+            <div class="col-6 p-4">بان تشيلى مع بطاطس</div>
+            <div class="col-6 secondary p-4">20 ريال سعودي</div>
+
+          </th>
+        </tr>
+        <tr class="line"></tr>
+        <tr class="row">
+          <th class="row col-3 p-4">
+            <div>المجموع</div>
+          </th>
+          <th class="col-9 row right">
+            <div class="col-6 p-4"></div>
+            <div class="col-6 text-black-50 p-4">60 ريال سعودي</div>
+
+          </th>
+        </tr>
+        <tr class="line"></tr>
+        <tr class="row">
+          <th class="row col-3 p-4">
+            <div>
+              <input class="customInput" placeholder="رمز قسيمة الخصم" type="text">
+            </div>
+          </th>
+          <th class="col-9 row ">
+            <div class="col-lg-6 col-md-4 col-sm-12 p-4"></div>
+            <div class="col-lg-4 col-md-4 col-sm-12  text-black-50 p-4">
+              <button class="customBtn">تفعيل القسيمة</button>
+            </div>
+
+          </th>
+        </tr>
+        <tr class="line"></tr>
+        <tr class="row">
+          <th class="row col-3 p-4">
+            <div>الخصم</div>
+          </th>
+          <th class="col-9 row ">
+            <div class="col-6 p-4"></div>
+            <div class="col-6 text-black-50 p-4">10 ريال سعودي</div>
+
+          </th>
+        </tr>
+        <tr class="line"></tr>
+        <tr class="row">
+          <th class="row col-6 p-4">
+            <div>ضريبة القيمة المضافة</div>
+          </th>
+          <th class="col-6 row">
+            <div class="col-3 p-4"></div>
+            <div class="col-9 text-black-50 p-4">70 ريال سعودي</div>
+
+          </th>
+        </tr>
+        <tr class="line"></tr>
+        <tr class="row mb-5">
+          <th class="row col-3 p-4">
+            <div>الإجمالي</div>
+          </th>
+          <th class="col-9 row ">
+            <div class="col-6 p-4"></div>
+            <div class="col-6 text-black-50 p-4">200 ريال سعودي</div>
+
+          </th>
+        </tr>
+
+
+      </table>
+    </div>
+
+
   </div>
-
-
-
-
-</div>
 </template>
 
 <script>
 export default {
   name: "Checkout",
-  data(){
-    return{
-      mobile:null
+  data() {
+    return {
+      mobile: null
 
     }
   },
@@ -44,10 +146,10 @@ export default {
     window.addEventListener('resize', this.checkScreen);
     this.checkScreen();
   },
-  methods:{
-    checkScreen(){
+  methods: {
+    checkScreen() {
       this.windowWidth = window.innerWidth;
-      if (this.windowWidth <= 750){
+      if (this.windowWidth <= 750) {
         this.mobile = true;
         return;
       }
@@ -59,11 +161,58 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.center{
+* {
+  font-weight: bold;
+
+}
+
+.customInput {
+  background: #F9F9F9 0% 0% no-repeat padding-box;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  width: 243px;
+  height: 89px;
+}
+.customBtn{
+  border: 1px solid #333333;
+  border-radius: 10px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  font-weight: bold;
+  font-size: 18px;
+  width: 194px;
+  height: 82px;
+  flex: 1;
+}
+
+.check-out {
+  font-size: 24px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 20px;
+  opacity: 1;
+
+  table {
+    width: 100%;
+  }
+
+  .line {
+    border-bottom: 1px solid;
+    border-color: #00000029;
+  }
+
+  .right {
+    border-right: 1px solid;
+    border-color: #00000029;
+  }
+}
+
+.center {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .wrapper {
   background: #ffffff;
   width: 844px;
