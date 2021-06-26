@@ -1,5 +1,5 @@
 <template>
-  <div class="container mt-5 center">
+  <div class="container mt-5 center mb-5">
     <div v-show="!this.mobile" class="wrapper">
       <div class="margin-area">
         <div class="dot two"></div>
@@ -30,7 +30,7 @@
         <tr class="row">
           <th class="row col-3 p-5">
             <span @click="number1--" class="col-1">-</span>
-            <span class="col-1 ">{{number1}}</span>
+            <span class="col-1 ">{{ number1 }}</span>
             <span @click="number1++" class="col-1 ">+</span>
           </th>
           <th class="col-9 row right">
@@ -42,8 +42,8 @@
         <tr class="line"></tr>
         <tr class="row">
           <th class="row col-3 p-5">
-             <span @click="number2--" class="col-1">-</span>
-            <span class="col-1 ">{{number2}}</span>
+            <span @click="number2--" class="col-1">-</span>
+            <span class="col-1 ">{{ number2 }}</span>
             <span @click="number2++" class="col-1 ">+</span>
           </th>
           <th class="col-9 row right">
@@ -55,8 +55,8 @@
         <tr class="line"></tr>
         <tr class="row">
           <th class="row col-3 p-5">
-             <span @click="number3--" class="col-1">-</span>
-            <span class="col-1 ">{{number3}}</span>
+            <span @click="number3--" class="col-1">-</span>
+            <span class="col-1 ">{{ number3 }}</span>
             <span @click="number3++" class="col-1 ">+</span>
           </th>
           <th class="col-9 row right">
@@ -83,7 +83,7 @@
               <input class="customInput" placeholder="رمز قسيمة الخصم" type="text">
             </div>
           </th>
-          <th class="col-9 row ">
+          <th class="col-9 row">
             <div class="col-lg-6 col-md-4 col-sm-12 p-4"></div>
             <div class="col-lg-4 col-md-4 col-sm-12  text-black-50 p-4">
               <button class="customBtn">تفعيل القسيمة</button>
@@ -130,8 +130,12 @@
     </div>
 
     <div>
-      <button @click="$router.push({name:'Home'})" class="text-white text-center btn d-inline  m-5" style="color: black;font-weight: bold; font-size: 24px">تنفيذ الطلب</button>
-      <router-link :to="{name:'ViewOrder'}" class="text-decoration-none d-inline m-lg-5 " style="color: black;font-weight: bold; font-size: 24px">تعديل الطلب</router-link>
+      <button @click="$router.push({name:'Home'})" class="text-white text-center btn d-inline  m-5"
+              style="color: black;font-weight: bold; font-size: 24px">تنفيذ الطلب
+      </button>
+      <router-link :to="{name:'ViewOrder'}" class="text-decoration-none d-inline m-lg-5 back"
+                   style="color: black;font-weight: bold; font-size: 24px">تعديل الطلب
+      </router-link>
     </div>
 
   </div>
@@ -143,9 +147,9 @@ export default {
   data() {
     return {
       mobile: null,
-      number1:1,
-      number2:1,
-      number3:1,
+      number1: 1,
+      number2: 1,
+      number3: 1,
 
     }
   },
@@ -172,13 +176,15 @@ export default {
   font-weight: bold;
 
 }
-span{
+
+span {
   cursor: pointer;
-  &:hover{
+  &:hover {
     opacity: 0.5;
   }
 }
-.btn{
+
+.btn {
   display: block;
   margin-right: auto;
   margin-left: auto;
@@ -188,11 +194,13 @@ span{
   width: 247px;
   height: 89px;
 }
-.back{
+
+.back {
   @media(max-width: 600px) {
-    margin-right: 96px;
+    margin: 96px!important;
   }
 }
+
 .customInput {
   background: #F9F9F9 0% 0% no-repeat padding-box;
   border-radius: 10px;
@@ -204,7 +212,8 @@ span{
   font-size: 16px;
 
 }
-.customBtn{
+
+.customBtn {
   border: 1px solid #333333;
   border-radius: 10px;
   background: #FFFFFF 0% 0% no-repeat padding-box;
@@ -213,6 +222,12 @@ span{
   width: 194px;
   height: 82px;
   flex: 1;
+  @media (max-width: 800px) {
+
+    margin-top: 48px;
+    margin-left: 72px
+
+  }
 }
 
 .check-out {
@@ -221,9 +236,14 @@ span{
   box-shadow: 0px 3px 6px #00000029;
   border-radius: 20px;
   opacity: 1;
+  @media(max-width: 800px) {
+    font-size: 16px;
+  }
+
 
   table {
     width: 100%;
+
   }
 
   .line {
@@ -234,6 +254,9 @@ span{
   .right {
     border-right: 1px solid;
     border-color: #00000029;
+    @media(max-width: 800px) {
+      border-right: none;
+    }
   }
 }
 

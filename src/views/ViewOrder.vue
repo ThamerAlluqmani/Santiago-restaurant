@@ -1,5 +1,5 @@
 <template>
-  <div class="container mt-5 center">
+  <div class="container mt-5 center mb-5">
     <div v-show="!this.mobile" class="wrapper">
       <div class="margin-area">
         <div class="dot two"></div>
