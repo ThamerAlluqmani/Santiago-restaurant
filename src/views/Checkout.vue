@@ -130,7 +130,7 @@
     </div>
 
     <div>
-      <button @click="$router.push({name:'Home'})" class="text-white text-center btn d-inline  m-5"
+      <button @click="$router.push({name:'Order'})" class="text-white text-center btn d-inline  m-5"
               style="color: black;font-weight: bold; font-size: 24px">تنفيذ الطلب
       </button>
       <router-link :to="{name:'ViewOrder'}" class="text-decoration-none d-inline m-lg-5 back"

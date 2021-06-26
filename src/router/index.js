@@ -14,6 +14,7 @@ import ViewOrder from "../views/ViewOrder";
 import Login from "../views/Login";
 import Register from "../views/Register";
 import Checkout from "../views/Checkout";
+import Order from "../views/Order";
 
 Vue.use(VueRouter);
 
@@ -89,6 +90,11 @@ const routes = [
     path: "/Checkout",
     name: "Checkout",
     component: Checkout,
+  },
+  {
+    path: "/Order",
+    name: "Order",
+    component: Order,
   },
 ];
 
