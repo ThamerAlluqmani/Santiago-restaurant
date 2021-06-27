@@ -1,5 +1,7 @@
 <template>
   <div class="container mt-5 center mb-5">
+
+
     <div v-show="!this.mobile" class="wrapper">
       <div class="margin-area">
         <div class="dot two"></div>
@@ -26,20 +28,72 @@
     </div>
 
     <div class="order m-5">
+      <div class="arrow-box mt-4">
+        <i class="arrow down"></i>
+        <i class="arrow up"></i>
+        <i class="arrow down"></i>
+        <i class="arrow up"></i>
+        <i class="arrow down"></i>
+        <i class="arrow up"></i>
+        <i class="arrow down"></i>
+        <i class="arrow up"></i>
+        <i class="arrow down"></i>
+        <i class="arrow up"></i>
+        <i class="arrow down"></i>
+        <i class="arrow up"></i>
+        <i class="arrow down"></i>
+        <i class="arrow up"></i>
+        <i class="arrow down"></i>
+        <i class="arrow up"></i>
+        <i class="arrow down"></i>
+        <i class="arrow up"></i>
+        <i class="arrow down"></i>
+        <i class="arrow up"></i>
+        <i class="arrow down"></i>
+        <i class="arrow up"></i>
+        <i class="arrow down"></i>
+        <i class="arrow up"></i>
+        <i class="arrow down"></i>
+        <i class="arrow up"></i>
+        <i class="arrow down"></i>
+        <i class="arrow up"></i>
+        <i class="arrow down"></i>
+        <i class="arrow up"></i>
+        <i class="arrow down"></i>
+        <i class="arrow up"></i>
+        <i class="arrow down"></i>
+        <i class="arrow up"></i>
+        <i class="arrow down"></i>
+        <i class="arrow up"></i>
+        <i class="arrow down"></i>
+        <i class="arrow up"></i>
+        <i class="arrow down"></i>
+        <i class="arrow up"></i>
+        <i class="arrow down"></i>
+        <i class="arrow up"></i>
+        <i class="arrow down"></i>
+        <i class="arrow up"></i>
+        <i class="arrow down"></i>
+        <i class="arrow up"></i>
+        <i class="arrow down"></i>
+        <i class="arrow up"></i>
+        <i class="arrow down"></i>
+        <i class="arrow up"></i>
+        <i class="arrow down"></i>
+      </div>
       <h1 class="text-center fw-bold mt-5">رقم الطلب</h1>
       <h1 class="text-center fw-bold mt-5">3565</h1>
       <h5 class="text-center text-black-50 mt-5 bottom">Thank you</h5>
-      <h5 class="text-center text-black-50 bottom">شكرا لزيارتك</h5>
+      <h5 class="text-center text-black-50 bottom mb-5">شكرا لزيارتك</h5>
     </div>
 
-    <h4>حالة الطلب :
-    </h4>
-    <div v-show="!this.mobile" class="wrapper mb-5">
-
-      <div class="margin-area">
+    <div v-show="!this.mobile" class="wrapper row mb-5">
+      <h2 class="d-inline  col">حالة الطلب :
+      </h2>
+      <div class="margin-area col">
         <div class="dot two"></div>
         <div class="dot three"></div>
-        <div class="progress-bar second"></div>
+        <div class="progress-bar first-down"></div>
         <div class="message message-1">
 
           <div>
@@ -229,6 +283,10 @@ button {
   &.third {
     left: 64%;
   }
+  &.first-down{
+    left: 77%;
+    width: 45%;
+  }
 }
 
 .message {
@@ -305,5 +363,24 @@ img{
   padding: 8px 64px;
   width: 247px;
   height: 89px;
+}
+.arrow-box{
+  width: 100%;
+  height: 14px;
+}
+.arrow {
+  border: solid #333333;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+}
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
 </style>
