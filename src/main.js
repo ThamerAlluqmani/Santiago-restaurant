@@ -6,7 +6,7 @@ import Vue2Editor from "vue2-editor";
 import 'bootstrap/scss/bootstrap.scss'
 import "bootstrap"
 import VueTelInput from 'vue-tel-input'
-
+import 'vue-tel-input/dist/vue-tel-input.css';
 Vue.use(VueTelInput)
 
 

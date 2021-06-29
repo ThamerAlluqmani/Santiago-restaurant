@@ -62,18 +62,8 @@
               </div>
             </div>
             <div class="col">
-              <label style="font-weight: bold; cursor: pointer" for="phone">رقم الجوال</label>
-              <div class="input-group mb-3 boxShadow">
-                <input name="phone" id="phone" dir="ltr" type="tel" class="customInput" aria-label="Text input with dropdown button">
-                <button class=" btn bg-white dropdown-toggle btn-lg" type="button" data-bs-toggle="dropdown" aria-expanded="false">+966</button>
-                <ul class="dropdown-menu dropdown-menu-end">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Separated link</a></li>
-                </ul>
-              </div>
+              <label style="font-weight: bold; cursor: pointer">رقم الجوال</label>
+              <vue-tel-input class="customInput2 mb-3 boxShadow" dir="ltr" v-model="phone"></vue-tel-input>
             </div>
           </div>
 
@@ -87,7 +77,7 @@
           </div>
           <h5 v-show="displayItem" class="text-center mt-5">اعادة الإرسال بعد 00:23</h5>
           <button @click="displayHidden()" class="register-button   mt-5 ">{{ button }}</button>
-          <div class="login-link">
+          <div class="login-link text-center mt-5">
             <router-link :to="{name:'Login'}" class="secondary text-decoration-none"
                          style="font-size: 16px; font-weight: bold">مسجل مسبقاً ؟
             </router-link>
@@ -269,5 +259,13 @@ input {
   }
 
 }
-
+.customInput2{
+  font-weight: bold;
+  outline: none;
+  border: none;
+  height: 72px;
+  @media(max-width: 600px){
+    height: 51px;
+  }
+}
 </style>
