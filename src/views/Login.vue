@@ -1,13 +1,12 @@
 <template>
 <div class="mb-5 mt-5">
   <div class="container mt-5 mb-5">
-
       <div class="box cardCenter">
         <div class="m-5">
-          <h3 class="text-center fw-bold p-5">تسجيل الدخول
+          <h3 class="text-center fw-bold p-3">تسجيل الدخول
             <div class="line text-center"></div></h3>
           <div class="card-body ">
-            <div class="mt-5">
+            <div>
               <label style="font-weight: bold; cursor: pointer" for="phone">رقم الجوال</label>
               <div class="input-group mb-3 boxShadow">
                 <input name="phone" dir="ltr" id="phone" type="text" class="form-control" aria-label="Text input with dropdown button">
@@ -29,9 +28,9 @@
               </div>
             </div>
             <h5 v-show="displayItem" class="text-center mt-5">اعادة الإرسال بعد 00:23</h5>
-            <button @click="displayHidden()" class="btn btn-lg  text-white mt-5">{{button}}</button>
-            <div class="register-link">
-              <router-link :to="{name:'Register'}" class="secondary  text-decoration-none">ليس لديك حساب ؟</router-link>
+            <button @click="displayHidden()" class="btn btn-lg  text-white mt-5 customBtn">{{button}}</button>
+            <div class="register-link text-center mt-5">
+              <router-link :to="{name:'Register'}" class="secondary  text-decoration-none ">ليس لديك حساب ؟</router-link>
             </div>
           </div>
         </div>
@@ -84,15 +83,15 @@ label{
   font-weight: bold;
   font-size: 16px;
 }
-button{
+.customBtn{
   display: block;
   margin-right: auto;
   margin-left: auto;
-  width: 183px;
-  height: 86px;
+  width: 143px;
+  height: 62px;
   @media(max-width: 600px){
-    width: 115px;
-    height: 62px;
+    width: 96px;
+    height: 48px;
   }
   background: #333333 0% 0% no-repeat padding-box;
   border-radius: 15px;
@@ -103,7 +102,6 @@ button{
    color: #E2725A;
  }
 }
-
 input {
   border: none;
   font-weight: bold;

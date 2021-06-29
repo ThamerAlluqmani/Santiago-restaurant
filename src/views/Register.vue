@@ -155,11 +155,11 @@ label {
   display: block;
   margin-right: auto;
   margin-left: auto;
-  width: 183px;
-  height: 86px;
+  width: 143px;
+  height: 62px;
   @media(max-width: 600px){
-    width: 115px;
-    height: 62px;
+    width: 96px;
+    height: 48px;
   }
   color: #FFFFFF;
   background: #333333 0% 0% no-repeat padding-box;
