@@ -1,22 +1,28 @@
 <template>
 <div class="model">
- <div class="container">
-   <div class="center mt-lg-5">
-     <star class="icon center"></star>
+ <div class="container text-center">
+   <div class="mt-lg-5">
+     <star class="icon"></star>
      <h3 class="text-white mt-5  ">نحن نسعى دائما لإرضاء عملاؤنا</h3>
    </div>
 
-   <div class="center">
-     <h3 class="text-white mt-5">ماهو تقييمك ؟</h3>
-     <star class="icon2"></star>
-     <star class="icon2"></star>
-     <star class="icon2"></star>
-     <star class="icon2"></star>
-     <star class="icon2"></star>
+   <div class="row">
+     <h3 class="text-white mt-5 col-8">ماهو تقييمك ؟</h3>
+     <div class="col-4"></div>
+   </div>
+   <div class="row">
+     <div class="col-8">
+       <star class="icon2"></star>
+       <star class="icon2"></star>
+       <star class="icon2"></star>
+       <star class="icon2"></star>
+       <star class="icon2"></star>
+     </div>
+     <div class="col-4"></div>
    </div>
 
-   <input class="model-content center mt-lg-5 mt-sm-2" placeholder="اضف تعليق"/>
-   <button class="btn btn-lg customButton center mt-5" @click="closeModel">اضف تقييمك</button>
+   <input class="model-content mt-3" placeholder="اضف تعليق"/>
+   <button class="customButton  mt-5" @click="closeModel">اضف تقييمك</button>
  </div>
 </div>
 </template>
@@ -61,15 +67,18 @@ export default {
 
 
   .model-content{
-    display: flex;
     flex-direction: column;
     justify-content: center;
     border-radius: 8px;
-    width: 300px;
+    width: 600px;
     padding: 40px 30px;
     background-color: white;
+    border: none;
+    outline: none;
+    margin: auto;
+    display: block;
     @media (max-width: 767px) {
-
+      width: 300px;
 
     }
 
@@ -88,39 +97,34 @@ export default {
 
 }
 .customButton{
-  background-color: white;
-  border: 1px solid;
+  width: 236px;
+  height: 82px;
+  background: #F9F9F9 0% 0% no-repeat padding-box;
   border-radius: 15px;
+  opacity: 1;
+  border: none;
+  font-weight: bold;
 
 
 }
 
-.center{
-  margin: 0 40%;
-  @media (max-width: 767px) {
-    margin: 0 ;
 
-  }
-}
 
 .icon{
   fill: #FFCC00;
   border-radius: 50% ;
+  padding:8px;
   border-right-color: white;
   background-color: white;
-  width: 72px;
+  width: 108px;
   @media (max-width: 767px) {
-    width: 32px;
+    width: 64px;
 
   }
 }
 .icon2{
   fill: #FFCC00;
   width: 32px;
-  @media (max-width: 767px) {
-    width: 10px;
-
-  }
 }
 
 </style>
