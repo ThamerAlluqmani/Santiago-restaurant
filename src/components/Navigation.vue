@@ -1,7 +1,7 @@
 <template>
  <header>
    <nav id="nav" class="mt-5">
-     <div v-if="this.$route.name === 'HealthyBreakfast'" class="right row">
+     <div v-if="this.$route.name === 'HealthyBreakfast' && !this.mobile" class="right row">
 
 
        <div class="col"  v-show="!this.mobile">
