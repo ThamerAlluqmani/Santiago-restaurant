@@ -20,7 +20,7 @@
           <div class="mt-5">
             <h5 class="third">ملاحظات</h5>
            <div class="row mt-3 edit">
-               <span class="card-text text-muted col  text-end  ">ازالة الصوص الحار</span>
+             <textarea name="" id="" placeholder="ازالة الصوص الحار"></textarea>
                <span class="card-text text-muted col text-start"><Edit class="icon"></Edit>تعديل</span>
            </div>
           </div>
@@ -84,14 +84,15 @@ name: "Card3",
   background: #FFFFFF 0% 0% no-repeat padding-box;
   font-weight: bold;
   font-size: 18px;
-  width: 194px;
-  height: 82px;
+  width: 124px;
+  height: 64px;
   flex: 1;
 }
 span{
   cursor: pointer;
 }
 .icon{
+  top: 0;
   width: 26px;
 }
 
@@ -101,6 +102,13 @@ span{
   width: 100%;
   border-radius: 10px;
   resize: none;
-  height: 102px;
+  height: 81px;
+}
+textarea{
+  outline: none;
+  border: none;
+  resize: none;
+  background: #F9F9F9 0% 0% no-repeat padding-box;
+  width: 50%;
 }
 </style>
