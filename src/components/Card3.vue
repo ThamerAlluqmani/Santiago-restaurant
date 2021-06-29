@@ -20,8 +20,10 @@
           <div class="mt-5">
             <h5 class="third">ملاحظات</h5>
            <div class="row mt-3 edit">
-             <textarea name="" id="" placeholder="ازالة الصوص الحار"></textarea>
-               <span class="card-text text-muted col text-start"><Edit class="icon"></Edit>تعديل</span>
+             <textarea name="textarea" id="textarea" placeholder="ازالة الصوص الحار"></textarea>
+             <label style="cursor: pointer" class="card-text text-muted col text-start pointer-event" for="textarea">
+              <Edit class="icon"></Edit>تعديل
+             </label>
            </div>
           </div>
         </div>
