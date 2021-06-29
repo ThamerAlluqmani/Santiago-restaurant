@@ -8,17 +8,7 @@
           <div class="card-body ">
             <div>
               <label style="font-weight: bold; cursor: pointer" for="phone">رقم الجوال</label>
-              <div class="input-group mb-3 boxShadow">
-                <input name="phone" dir="ltr" id="phone" type="text" class="form-control" aria-label="Text input with dropdown button">
-                <button class=" btn bg-white dropdown-toggle btn-lg" type="button" data-bs-toggle="dropdown" aria-expanded="false">+966</button>
-                <ul class="dropdown-menu dropdown-menu-end">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Separated link</a></li>
-                </ul>
-              </div>
+              <vue-tel-input class="customInput mb-3 boxShadow" dir="ltr" v-model="phone"></vue-tel-input>
             </div>
 
             <div v-show="displayItem" class="mt-5">
@@ -40,8 +30,13 @@
 </template>
 
 <script>
+import { VueTelInput } from 'vue-tel-input';
+import 'vue-tel-input/dist/vue-tel-input.css';
 export default {
   name: "Login",
+  components: {
+    VueTelInput,
+  },
   data(){
     return{
       button:"الدخول",
@@ -102,14 +97,7 @@ label{
    color: #E2725A;
  }
 }
-input {
-  border: none;
-  font-weight: bold;
 
-  &:focus {
-    outline: none;
-  }
-}
 .register-link{
   font-size: 16px;
   font-weight: bold;
@@ -122,8 +110,11 @@ input {
   box-shadow: 0px 3px 6px #00000029;
   border-radius: 10px;
 }
-.form-control{
-  height: 102px;
+.customInput{
+  font-weight: bold;
+  outline: none;
+  border: none;
+  height: 72px;
   @media(max-width: 600px){
     height: 51px;
   }
