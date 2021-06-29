@@ -36,7 +36,7 @@ export default {
 
   transition: .5s ease all;
   &:hover{
-    transform: rotateZ(-1deg) scale(1.01);
+    transform: translateY(-10px);
   }
 
 
