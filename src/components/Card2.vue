@@ -32,7 +32,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+#card{
+  transition: .5s ease all;
+  &:hover{
+    transform: translateY(-10px);
+  }
+}
 .secondary {
   color: #85311B;
 

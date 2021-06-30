@@ -15,15 +15,11 @@
       </div>
     </div>
     <div class="row mt-5 mb-5">
-      <Card :url="{name:'Offers'}" img="2/dinner-6.png" title="الفطور"></Card>
-      <Card :url="{name:'Offers'}" img="1/breakfast-3.png" title="وجبات مميزة"></Card>
-      <Card :url="{name:'Offers'}" img="1/breakfast-2.png" title="وجبات العشاء"></Card>
-      <Card :url="{name:'Offers'}" img="1/drink-1.png" title="المشروبات"></Card>
-      <Card :url="{name:'Offers'}" img="1/dessert-1.png" title="الحلويات"></Card>
-      <Card :url="{name:'Offers'}" img="1/lunch-3.png" title="الأكلات المميزة"></Card>
-      <Card :url="{name:'Offers'}" img="1/dinner-1.png" title="العروض"></Card>
-      <Card :url="{name:'Offers'}" img="1/dessert-2.png" title="الحلويات الجديدة"></Card>
-      <Card :url="{name:'Offers'}" img="1/breakfast-7.png" title="الوجبات الرئيسية"></Card>
+      <Card :url="{name:'HealthyBreakfast'}" img="1/breakfast-2.png" title="وجبات العشاء"></Card>
+      <Card :url="{name:'HealthyBreakfast'}" img="1/drink-1.png" title="المشروبات"></Card>
+      <Card :url="{name:'HealthyBreakfast'}" img="1/dessert-1.png" title="الحلويات"></Card>
+      <Card :url="{name:'HealthyBreakfast'}" img="1/lunch-3.png" title="الأكلات المميزة"></Card>
+      <Card :url="{name:'HealthyBreakfast'}" img="1/dinner-1.png" title="العروض"></Card>
     </div>
 
   </div>
