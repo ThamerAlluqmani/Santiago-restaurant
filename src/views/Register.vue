@@ -3,11 +3,10 @@
     <div class="container mt-5 mb-5">
 
       <div class="box cardCenter" style="max-width: 720px">
-        <h3 class="text-center mt-5 p-5">التسجيل لأول مره
-          <div class="line text-center"></div>
-        </h3>
+        <h3 class="text-center fw-bold p-3">التسجيل لأول مرة
+          <div class="line text-center"></div></h3>
         <div class="card-body ">
-          <div class="mt-5 row row-cols-2">
+          <div class=" row row-cols-2">
             <div class="col">
               <label style="font-weight: bold; cursor: pointer" for="first">الاسم الاول</label>
               <div class="boxShadow">
