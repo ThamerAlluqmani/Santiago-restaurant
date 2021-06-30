@@ -26,107 +26,108 @@
     </div>
 
     <div class="check-out mb-5">
-      <table>
-        <tr class="row">
-          <th class="row col-3 p-5">
-            <span @click="number1--" class="col-1">-</span>
-            <span class="col-1 ">{{ number1 }}</span>
-            <span @click="number1++" class="col-1 ">+</span>
-          </th>
-          <th class="col-9 row right">
-            <div class="col-6 p-4">بان تشيلى مع بطاطس</div>
-            <div class="col-6 secondary p-4">20 ريال سعودي</div>
+      <div class="p-5">
+        <table>
+          <tr class="row">
+            <th class="row col-4 p-5">
+              <span @click="number1--" class="col-1">-</span>
+              <span class="col-1 ">{{ number1 }}</span>
+              <span @click="number1++" class="col-1 ">+</span>
+            </th>
+            <th class="col-8 row right">
+              <div class="col-6 p-4">بان تشيلى مع بطاطس</div>
+              <div class="col-6 secondary text-start p-4 fs-6">20 ريال سعودي</div>
 
-          </th>
-        </tr>
-        <tr class="line"></tr>
-        <tr class="row">
-          <th class="row col-3 p-5">
-            <span @click="number2--" class="col-1">-</span>
-            <span class="col-1 ">{{ number2 }}</span>
-            <span @click="number2++" class="col-1 ">+</span>
-          </th>
-          <th class="col-9 row right">
-            <div class="col-6 p-4">بان تشيلى مع بطاطس</div>
-            <div class="col-6 secondary p-4">20 ريال سعودي</div>
+            </th>
+          </tr>
+          <tr class="line"></tr>
+          <tr class="row">
+            <th class="row col-4 p-5">
+              <span @click="number2--" class="col-1">-</span>
+              <span class="col-1 ">{{ number2 }}</span>
+              <span @click="number2++" class="col-1 ">+</span>
+            </th>
+            <th class="col-8 row right">
+              <div class="col-6 p-4">بان تشيلى مع بطاطس</div>
+              <div class="col-6 secondary text-start p-4 fs-6">20 ريال سعودي</div>
 
-          </th>
-        </tr>
-        <tr class="line"></tr>
-        <tr class="row">
-          <th class="row col-3 p-5">
-            <span @click="number3--" class="col-1">-</span>
-            <span class="col-1 ">{{ number3 }}</span>
-            <span @click="number3++" class="col-1 ">+</span>
-          </th>
-          <th class="col-9 row right">
-            <div class="col-6 p-4">بان تشيلى مع بطاطس</div>
-            <div class="col-6 secondary p-4">20 ريال سعودي</div>
+            </th>
+          </tr>
+          <tr class="line"></tr>
+          <tr class="row">
+            <th class="row col-4 p-5">
+              <span @click="number3--" class="col-1">-</span>
+              <span class="col-1 ">{{ number3 }}</span>
+              <span @click="number3++" class="col-1 ">+</span>
+            </th>
+            <th class="col-8 row right">
+              <div class="col-6 p-4">بان تشيلى مع بطاطس</div>
+              <div class="col-6 secondary text-start p-4 fs-6">20 ريال سعودي</div>
 
-          </th>
-        </tr>
-        <tr class="line"></tr>
-        <tr class="row">
-          <th class="row col-3 p-4">
-            <div>المجموع</div>
-          </th>
-          <th class="col-9 row right">
-            <div class="col-6 p-4"></div>
-            <div class="col-6 text-black-50 p-4">60 ريال سعودي</div>
+            </th>
+          </tr>
+          <tr class="line"></tr>
+          <tr class="row">
+            <th class="row col-4 p-4">
+              <div>المجموع</div>
+            </th>
+            <th class="col-8 row right">
+              <div class="col-6 p-4"></div>
+              <div class="col-6 text-black-50 text-start p-4 fs-6">60 ريال سعودي</div>
 
-          </th>
-        </tr>
-        <tr class="line"></tr>
-        <tr class="row">
-          <th class="row col-3 p-4">
-            <div>
-              <input class="customInput" placeholder="رمز قسيمة الخصم" type="text">
-            </div>
-          </th>
-          <th class="col-9 row">
-            <div class="col-lg-6 col-md-4 col-sm-12 p-4"></div>
-            <div class="col-lg-4 col-md-4 col-sm-12  text-black-50 p-4">
-              <button class="customBtn">تفعيل القسيمة</button>
-            </div>
+            </th>
+          </tr>
+          <tr class="line"></tr>
+          <tr class="row">
+            <th class="row col-3 p-4">
+              <div>
+                <input class="customInput" placeholder="رمز قسيمة الخصم" type="text">
+              </div>
+            </th>
+            <th class="col-9 row">
+              <div class="col-lg-6 col-md-4 col-sm-12 p-4"></div>
+              <div class="col-lg-4 col-md-4 col-sm-12  text-black-50 p-4">
+                <button class="customBtn">تفعيل القسيمة</button>
+              </div>
 
-          </th>
-        </tr>
-        <tr class="line"></tr>
-        <tr class="row">
-          <th class="row col-3 p-4">
-            <div>الخصم</div>
-          </th>
-          <th class="col-9 row right">
-            <div class="col-6 p-4"></div>
-            <div class="col-6 text-black-50 p-4">10 ريال سعودي</div>
+            </th>
+          </tr>
+          <tr class="line"></tr>
+          <tr class="row">
+            <th class="row col-4 p-4">
+              <div>الخصم</div>
+            </th>
+            <th class="col-8 row right">
+              <div class="col-6 p-4"></div>
+              <div class="col-6 text-black-50 text-start p-4 fs-6">10 ريال سعودي</div>
 
-          </th>
-        </tr>
-        <tr class="line"></tr>
-        <tr class="row">
-          <th class="row col-6 p-4">
-            <div>ضريبة القيمة المضافة</div>
-          </th>
-          <th class="col-6 row right">
-            <div class="col-3 p-4"></div>
-            <div class="col-9 text-black-50 p-4">70 ريال سعودي</div>
+            </th>
+          </tr>
+          <tr class="line"></tr>
+          <tr class="row">
+            <th class="row col-4 p-4">
+              <div>ضريبة القيمة المضافة</div>
+            </th>
+            <th class="col-8 row right">
+              <div class="col-6 p-4"></div>
+              <div class="col-6 text-start text-black-50 p-4 fs-6">70 ريال سعودي</div>
+            </th>
+          </tr>
+          <tr class="line"></tr>
+          <tr class="row mb-5">
+            <th class="row col-4 p-4">
+              <div>الإجمالي</div>
+            </th>
+            <th class="col-8 row right">
+              <div class="col-6 p-4"></div>
+              <div class="col-6 text-start text-black-50 p-4 fs-6">20 ريال سعودي</div>
 
-          </th>
-        </tr>
-        <tr class="line"></tr>
-        <tr class="row mb-5">
-          <th class="row col-3 p-4">
-            <div>الإجمالي</div>
-          </th>
-          <th class="col-9 row right">
-            <div class="col-6 p-4"></div>
-            <div class="col-6 text-black-50 p-4">200 ريال سعودي</div>
-
-          </th>
-        </tr>
+            </th>
+          </tr>
 
 
-      </table>
+        </table>
+      </div>
     </div>
 
     <div>
