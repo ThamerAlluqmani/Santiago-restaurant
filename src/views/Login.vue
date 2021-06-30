@@ -14,7 +14,7 @@
             <div v-show="displayItem" class="mt-5">
               <label style="font-weight: bold; cursor: pointer" for="check">رمز التحقق</label>
               <div class="boxShadow">
-                <input id="check" name="phone" type="tel"  class="form-control mt-3">
+                <input id="check" name="phone" type="tel"  class="customInput mt-3">
               </div>
             </div>
             <h5 v-show="displayItem" class="text-center mt-5">اعادة الإرسال بعد 00:23</h5>
