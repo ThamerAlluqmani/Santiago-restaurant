@@ -43,21 +43,17 @@
      <router-link :to="{name:'Home'}">
        <img src="../assets/logo.png" alt="">
      </router-link>
+
+
      <div class="left"  v-show="!this.mobile">
-       <div class="btn">
-         <world class=""></world>
-         <select class="p-2">
-           <option class="" value="">
-             العربية
-           </option>
-           <option class="" value="">
-             English
-           </option>
-         </select>
+       <div class="dropdown">
+         <button class="btn  dropdown-toggle border-white" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+           <world></world><span class="p-2">العربية</span>
+         </button>
+         <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+           <li><button class="dropdown-item text-center" type="button">English</button></li>
+         </ul>
        </div>
-
-
-
      </div>
 
 
