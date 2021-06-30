@@ -249,29 +249,8 @@
 
 
       <div class="mt-5">
-        <h3 style="font-weight: bold">الأفضل مبيعاً</h3>
-        <div class="row mt-5 ">
-          <div v-if="!this.mobile" class="col col-lg-1 pt-5 p-5">
-            <Rarow class="icon3" />
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-12 p-5">
-            <img src="1/breakfast-4.png" alt="" class="card-img">
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-12 p-5">
-            <img src="1/breakfast-2.png" alt="" class="card-img">
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-12 p-5">
-            <img src="1/breakfast-3.png" alt="" class="card-img">
-          </div>
-          <div v-if="this.mobile" class="col-lg-3 col-md-6 col-sm-12 p-5">
-            <img src="1/breakfast-3.png" alt="" class="card-img">
-          </div>
-          <div v-show="!mobile" class="col col-lg-1 pt-5 p-5">
-            <Larow class="icon3"/>
-          </div>
-
-
-        </div>
+        <h3 style="font-weight: bold" class="mb-5">الأفضل مبيعاً</h3>
+        <Carousel2></Carousel2>
       </div>
 
 
@@ -290,8 +269,7 @@ import Comment from "../components/Comment";
 import bascket from '../assets/5/Icon material-add-shopping-cart.svg'
 import Model from "../components/Model";
 import star from '../assets/icons/star-solid.svg'
-import Larow from '../assets/icons/angle-left-solid.svg'
-import Rarow from '../assets/icons/angle-right-solid.svg'
+import Carousel2 from "../components/Carousel2";
 
 export default {
   name: "FoodInfo",
@@ -310,9 +288,10 @@ export default {
     this.checkScreen();
   },
   components: {
+    Carousel2,
     Model,
     Comment,
-    arrowDown, bascket, star , Rarow , Larow
+    arrowDown, bascket, star
   },
   methods: {
     closeModel() {
